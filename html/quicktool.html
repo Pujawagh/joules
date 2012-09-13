@@ -1,0 +1,617 @@
+<html>
+
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"; Set-Cookie: NAME="3"; expires="Sat, 08 Dec 2012 05:42:04 GMT"; />
+  
+  <link rel="stylesheet" type="text/css" href="css/chosen.css" />
+ <link rel="stylesheet" type="text/css" href="css/main1.css" /> 
+ 
+ 
+  <link rel="canonical" href="http://www.jouleassets.com">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta name="description" content="Joule Assets Inc. - Energy Reduction Asset Optimization Platform." />
+  <meta name="keywords" content="" />
+  <meta name="author" content="Joule Assets" />
+  <meta name="robots" content="index, follow" />
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+   
+   <div id="Frame">
+ 
+  <div id="header">
+   
+    <div id="map_canvas"></div>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBwDgwqZ5_KhakKOkSxeG12gvpeeigBWrY&sensor=false"></script>
+
+  <a href="index"><img src="http://jouleassets.com/static/img/NewJoule175.gif" id="logo"/></a>
+  
+  
+   
+  <a href="eras"><img src="http://jouleassets.com/static/img/logotext.gif" id="eratext" /></a>
+</div>
+<div></div><br/><br/><br/>
+<div class="group half" style="">
+<div id="sidebar">
+<nav id="fixed-nav">
+		<ul class="fixed-nav">
+			<li><a href="#fac_loc" id="location">Facility Location</a></li><br/><br/><br/>
+      <li><a href="#fac_type" id="type" >Facility Type</a></li><br/><br/><br/>
+      <li><a href="#curtailment_capability" id="curtailment">Curtailment Capability</a></li><br/><br/><br/>
+      <li><a href="#standbygen" id="generator">Stand-By Generator</a></li><br/><br/><br/>
+      <li><a href="#dropportunity" id="DR">DR opportunity</a></li> <br/><br/><br/>
+			<li><a href="#header" id="top">Back to Top </a></li><br/>														
+		</ul>
+	</nav>
+  
+  </div>
+  
+  <div id="content">
+
+
+<form name= "form" action="demo" method="post">
+          <input type="hidden" name="fa_id" value="0">
+          <input type="hidden" name="user" value="twisterius">
+          <div class="forms">
+          <p class="colored-bar bluebar" id="fac_loc"><font size="5">Facility Location</font></p>
+            <div id="address"class="address">Address<br/>
+            <input class="inputfield" type="text" size="36" name="address" value="" style="width: 600px; height: 55px;" ></div>
+           <br/><br/>
+            <div id="city"class="address"> <label>City</label><br/>
+              <input class="inputfield" type="text" size="19" name="city" value="" style="width: 300px; height: 55px;">
+            
+          
+              <label>State</label>
+              <select class="chosen" id="state" name="state" style="width:240px; ">
+                <option value="0"></option>
+                <option value="CT">CT</option><option value="DC">DC</option><option value="DE">DE</option><option value="MA">MA</option><option value="MD">MD</option><option value="MI">MI</option><option value="NJ">NJ</option><option value="NY">NY</option><option value="OH">OH</option><option value="PA">PA</option><option value="VA">VA</option><option value="WV">WV</option>              </select>
+            </div>
+            <br/><br/>
+           <div class="address"><font color="#bb0000"><b>*</b></font><label>Zip Code</label><br/>
+              <input class="number inputfield" type="text" name="zip_code" id="zip" size="6" value="" style="width: 300px; height: 55px;">
+            
+          
+             <font color="#bb0000"><b>*</b></font>Utility</font>
+ <select class="chosen" name="utility" id="utility"style="width:230px;">
+                <option value="0"></option>
+              <option value="1">Con Edison</option>
+                 <option value="2">NYSEG</option>
+                    <option value="3">RGE</option>
+                       <option value="4">Niagara Mohawk</option>
+					<option value="5">Other (Utility name)</option>
+          </select>
+          </div>
+          
+            <br>
+            </div>
+            <br/><br/><br/><br/><br/><br/><br/>
+            
+            
+            
+            
+            
+             
+             <p class="colored-bar bluebar" id="fac_type"><font size="5">Facility Type</font></p>
+           <div class="form2">
+             <div class="facility">
+             Facility Type
+             <select class="chosen" name="facility_type" id="facility_type"style="width:250px;">
+                <option value="0"></option>
+              <option><b>Office Building</b></option>
+  <option><b>Multi Family</b></option>
+  <option><b>Retail</b></option>
+  <option><b>Hospitality</b></option>
+  
+  <option><b>Educational</b></option>
+  <option><b>Industrial</b></option>
+  <option><b>Medical</b></option>
+  <option><b>Data Center</b></option>
+  <option><b>Residential</b></option>
+  <option><b>Municipal</b></option>
+          </select>
+          </div>
+          <br/><br/>
+          
+          <h5><p id="upload">Click here to upload your meter data.</p></h5>
+
+            <div id="upload_meter_data_file_input">
+			<div class="file_uploader">
+<div class="upload_drop_files" style="display: none;">
+<span>Drop files here to upload</span>
+</div>
+
+<div class="upload-button" style="position: relative; cursor:pointer; background-color: #86C0F7; overflow: hidden; direction: ltr;">
+Upload a file
+<input type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; background:#86C0F7; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;">
+
+
+</div>
+<font size="2">(We accept csv,xls,xml file formats)</font>
+
+<ul class="upload-list"></ul>
+</div>
+            </div>&nbsp;&nbsp;&nbsp;<a href="">Download Template</a><br/><br/>
+			
+      <center><h3>OR</h3></center>
+      <br/>
+     <p id="meterdata"> <b><font size="3.5px">Manually enter your metered usage data</b><br/><br/>
+           
+ <select class="chosen" name="meter_usage_data" id="meter_usage_data"style="width:250px;">
+                <option value="0"></option>
+              <option value="month">Monthly</option>
+                 <option value="season">Seasonly</option>
+                    <option value="year">Yearly</option>
+                     
+          </select></p>
+<div id="manual_data" style="overflow:visible;">			
+		             
+					  <!--<button id="month" class="show_button" onclick="selectBtn(this.id)">Monthly</b></button></em>
+
+              
+              <em><b><button id="season" class="show_button" onclick="selectBtn(this.id)">Seasonly</b></button></em>
+              <em><b><button id="year" class="show_button" onclick="selectBtn(this.id)">Yearly</b></button></em> -->
+
+			  <br/>
+			  <br/>
+			  
+              <div id="month" class="consumption_period" style="display:block; margin-right:-590px;">
+                <table align="center">
+                  <tbody>
+                    <tr>
+                      <td style="background-color: #6E6E6E; color: #ffffff;"><b>Janurary</b></td>
+                      <td style="background-color: #6E6E6E; color: #ffffff;"><b>Feburary</b></td>
+                      <td style="background-color: #6E6E6E; color: #ffffff;"><b>March</b></td>
+                      <td style="background-color: #6E6E6E; color: #ffffff;"><b>April</b></td>
+                      <td style="background-color: #6E6E6E; color: #ffffff;"><b>May</b></td>
+                      <td style="background-color: #6E6E6E; color: #ffffff;"><b>June</b></td>
+                    </tr>
+                    <tr>
+					 
+					 
+                     <td><input type="text" id="january" class="number uploadmeter_table" name="january" value="kWh" onfocus="value=''"></td>
+                      
+                      <td><input type="text" id="febuary" class="number uploadmeter_table"name="febuary" value="kWh" onfocus="value=''"></td>
+                      <td><input type="text" id="march" class="number uploadmeter_table"name="march" value="kWh" onfocus="value=''"></td>
+                      <td><input type="text" id="april"class="number uploadmeter_table" name="april"  value="kWh" onfocus="value=''"></td>
+                      <td><input type="text" id="may" class="number uploadmeter_table" name="may"  value="kWh" onfocus="value=''"></td>
+                      <td><input type="text" id="june" class="number uploadmeter_table"name="june"  value="kWh" onfocus="value=''"></td>
+					  
+                    </tr>
+                    <tr>
+					
+                      <td><input type="text" id="january_peak" class="number uploadmeter_table_peak"name="january_peak" value="peak kW" onfocus="value=''"></td>
+                      <td><input type="text" id="febuary_peak" class="number uploadmeter_table_peak"name="febuary_peak" value="peak kW" onfocus="value=''"></td>
+                      <td><input type="text" id="march_peak" class="number uploadmeter_table_peak"name="march_peak"  value="peak kW" onfocus="value=''"></td>
+                      <td><input type="text" id="april_peak" class="number uploadmeter_table_peak"name="april_peak" value="peak kW" onfocus="value=''"></td>
+                      <td><input type="text" id="may_peak" class="number uploadmeter_table_peak"name="may_peak" value="peak kW" onfocus="value=''"></td>
+                      <td><input type="text" id="june_peak" class="number uploadmeter_table_peak"name="june_peak"  value="peak kW" onfocus="value=''"></td>
+                    </tr>
+                    <tr>
+                      <td style="background-color: #6E6E6E; color: #ffffff;" ><b>July</b></td>
+                      <td style="background-color: #6E6E6E; color: #ffffff;"><b>August</b></td>
+                      <td style="background-color: #6E6E6E; color: #ffffff;"><b>September</b></td>
+                      <td style="background-color: #6E6E6E; color: #ffffff;"><b>October</b></td>
+                      <td style="background-color: #6E6E6E; color: #ffffff;"><b>November</b></td>
+                      <td style="background-color: #6E6E6E; color: #ffffff;"><b>December</b></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" id="july" class="number uploadmeter_table"name="july" value="kWh" onfocus="value=''"></td>
+                      <td><input type="text" id="august" class="number uploadmeter_table"name="august" value="kWh" onfocus="value=''"></td>
+                      <td><input type="text" id="september"class="number uploadmeter_table" name="september"  value="kWh" onfocus="value=''"></td>
+                      <td><input type="text" id="october" class="number uploadmeter_table"name="october"  value="kWh" onfocus="value=''"></td>
+                      <td><input type="text" id="november" class="number uploadmeter_table"name="november" value="kWh" onfocus="value=''"></td>
+                      <td><input type="text" id="december" class="number uploadmeter_table"name="december" value="kWh" onfocus="value=''"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" id="july_peak" class="number uploadmeter_table_peak"name="july_peak" value="peak kW" onfocus="value=''"></td>
+                      <td><input type="text" id="august_peak" class="number uploadmeter_table_peak"name="august_peak" value="peak kW" onfocus="value=''"></td>
+                      <td><input type="text" id="september_peak" class="number uploadmeter_table_peak" name="september_peak" value="peak kW" onfocus="value=''"></td>
+                      <td><input type="text" id="october_peak"class="number uploadmeter_table_peak" name="october_peak"  value="peak kW" onfocus="value=''"></td>
+                      <td><input type="text" id="november_peak" class="number uploadmeter_table_peak"name="november_peak" value="peak kW" onfocus="value=''"></td>
+                      <td><input type="text" id="december_peak"class="number uploadmeter_table_peak" name="december_peak" value="peak kW" onfocus="value=''"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+			  <div id="season" class="consumption_period" style="display:none">
+			  
+			   <table>
+			   <tr>
+			   <td>
+			   
+			 <b>Winter</b> &nbsp;&nbsp;&nbsp;&nbsp;
+			 
+			 <input type="text" id="winter" class="number" cols="45" rows="5" name="winter" value="kWh" onfocus="value=''">
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+                     <input type="text" id="winter_peak"  class="number" cols="45" rows="5" name="winter_peak" value="peak kW" onfocus="value=''">
+               		   
+		
+                <br/>
+				<br/>
+                <b>Summer</b> &nbsp;
+                <input type="text" id="summer" class="number" name="summer" value="kWh" onfocus="value=''">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                    <input type="text" id="summer_peak" class="number"  name="summer_peak"  value="peak kW" onfocus="value=''">
+				</td>
+</tr>
+</table>				
+              </div>
+			
+            
+              <div id="year" class="consumption_period" style="display:none;">
+			  <table>
+			  <tr>
+			  <td>
+			  
+                <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whole Year </b>
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="yearly" class="number"  name="yearly" value="kWh" onfocus="value=''">
+                                   
+									<input type="text" id="yearly_peak" class="number"  name="yearly_peak"  value="peak kW" onfocus="value=''">
+                </td></tr></table>
+              </div>
+			  
+            </div><br/><br/>
+      <font size="4.8px">Meter Resolution</font>
+<select class="chosen" name="meter_resolution" style="width:250px;" >
+                <option value="0"></option>
+      
+              <option value="4">1 second</option>
+              <option value="1">1 minute</option>
+              <option value="10">5 minutes</option>
+              <option value="15">15 minutes</option>
+              <option value="30">1 hour</option>
+              <option value="120">Monthly</option>
+             
+            </select>
+     
+          </div>
+          <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>
+          
+          
+             <p class="colored-bar bluebar" id="curtailment_capability"><font size="5">Curtailment Capability</font></p>
+             <br/><br/>
+             <div class="form3">
+              <font color="#bb0000" size="3px"><b>*</b></font> Given 
+            <select name="advanced_notice" id="advanced_notice" class="chosen">
+              <option value="0"></option>
+              <option value="(0,4,0,0)">4 seconds</option>
+              <option value="(0,0,0,0,10)">10 minutes</option>
+              <option value="(0,0,0,0,15)">15 minutes</option>
+              <option value="(0,0,0,0,30)">30 minutes</option>
+              <option value="(0,0,0,0,0,1)">1 hour</option>
+              <option value="(0,0,0,0,0,2)">2 hours</option>
+              <option value="(1,0,0,0,0,0)">1 day</option>
+            </select> advanced notice
+            <br/>
+            <br/>
+            
+            <p id="curtail_fac"><font color="#bb0000" size="3px"><b>*</b></font> My facility can <span style="color: #488DF6" title="This reflects electric loads actually reduced and not supported by standby generators, which is covered later">curtail</span>
+              <span id="curtail"><input type="text" cols="15" rows="5" id="facility_curtail" class="number" name="facility_curtailment" onfocus="value=''"> </span>kW.</p> 
+             
+             <br/>
+            <p id="durationtext"><font color="#bb0000" size="3px"><b>*</b></font> for at least
+            <select id="duration" name="duration" class="chosen">
+              <option value="0"></option>
+              <option value="1">1 hour</option>
+              <option value="2">2 hours</option>
+              <option value="3">3 hours</option>
+              <option value="4">4 hours</option>
+              <option value="5">5 hours</option>
+              <option value="6">6 hours</option>
+            </select> duration</p><br/><br/>
+            
+            <font color="#bb0000" size="3px"><b>*</b></font>for at most
+            <select id="frequency" name="frequency" class="chosen">
+              <option value="0"></option>
+              <option value="5">1-5</option>
+              <option value="10">6-10</option>
+              <option value="15">11-15</option>
+              <option value="20">16-20</option>
+              <option value="30">20-30</option>
+              <option value="100">31+</option>
+            </select>
+            times a year
+            
+            </div>
+            
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>          
+<br/><br/>
+            <p class="colored-bar bluebar" id="standbygen"><font size="5">Stand-By Generator</font></p>
+            <div class="form4">
+            
+            <!--#####Gentable######-->
+            
+            <table id="gentabs" align="center"  width="540px" style="background-color:#ffffff; color: #000000; width:670px; border-color: #; text-align: center;" >
+            <tbody>
+            
+           
+ <tr><th style="background-color: #6E6E6E; color: #ffffff;"></th>
+                      <th style="margin-left:-30px; height: 50px; background-color: #6E6E6E; color: #ffffff;"><b>Generator 1</b></th>
+                      <th style="background-color: #6E6E6E; color: #ffffff;"><b>Generator 2</b></th>
+                      <th style="background-color: #6E6E6E; color: #ffffff;"><b>Generator 3</b></th>
+                      
+                    </tr>
+                    <br/>
+                    <tr>
+                    <td width="100px" height="50px"style="background-color:#6E6E6E; color: #ffffff;"><b>Make</b></td>
+                  <td><select id="make1" name="make1" class="chosen" onchange="getOther(this);" > 
+            <option value="0"></option> 
+              <option value="Caterpiller">Caterpiller</option> 
+               <option value="Kohler">Kohler</option> 
+                <option value="MTU">MTU</option> 
+                 <option value="Cummins">Cummins</option>
+                  <option value="Generic">Generic</option> 
+                 <option value="Mitsubishi">Mitsubishi</option> 
+                 <option value="Other">Other</option> 
+                        </select></td>
+                  <td><select  name="make2" class="chosen" onchange="getOther(this);"> 
+              <option value="0"></option> 
+              <option value="1">Caterpiller</option> 
+               <option value="2">MTU </option> 
+                <option value="3">Cummins </option> 
+                 <option value="4">Generic</option> 
+                 <option value="Mitsubishi">Mitsubishi</option> 
+                 <option value="Other">Other</option>
+              </select></td>
+                        
+                        <td><select  name="make3" class="chosen" onchange="getOther(this);"> 
+              <option value="0"></option> 
+              <option value="1">Caterpiller</option> 
+               <option value="2">MTU </option> 
+                <option value="3">Cummins </option> 
+                 <option value="4">Generic</option> 
+                 <option value="Mitsubishi">Mitsubishi</option> 
+                 <option value="Other">Other</option>
+              </select></td>   
+                    
+                    </tr>
+                    
+                    <tr>
+                    
+                    <td style="background-color:#6E6E6E; color: #ffffff;"><b>Generator Capacity(kW)</b></td>
+                     <td><input type="text" id="capacity1"name="capacity1" class="textinput number"></td>
+                    <td><input type="text" id="capacity2" name="capacity2" class="textinput number"></td>
+                    <td><input type="text" id="capacity3" name="capacity3" class="textinput number"></td>
+                    </tr>
+                    <tr>
+                    <td style="background-color:#6E6E6E; "><b><span style="color: #488DF6" title="This reflects loads that are shifted from grid-supplied to standby generator-supplied when a curtailment event is called.">Connected Load(kW)</span></b></td>
+      <td><input type="text" id="connected_load" name="connected_load1" class="textinput number"></td>
+       <td><input type="text" id="connected_load" name="connected_load2" class="textinput number"></td>
+        <td><input type="text" id="connected_load" name="connected_load3" class="textinput number"></td>
+      
+                    </tr>
+                    
+                    
+                    
+                    <tr><td style="background-color:#6E6E6E; color: #ffffff;"><b>Comments..</b></td>
+                    
+                    <td><textarea name="comments1" cols="35" rows="3"  id="txtArea" class="html-text-box" onfocus="setMessage(this, true);" onblur="setMessage(this, false);">List the loads, if known(Elevators, Computers, lighting, etc)...</textarea></td>
+         <td><textarea name="comments2" cols="35" rows="3"  id="txtArea" class="html-text-box" onfocus="setMessage(this, true);" onblur="setMessage(this, false);">List the loads, if known(Elevators, Computers, lighting, etc)...</textarea></td>
+         <td><textarea name="comments3" cols="35" rows="3"  id="txtArea" class="html-text-box" onfocus="setMessage(this, true);" onblur="setMessage(this, false);">List the loads, if known(Elevators, Computers, lighting, etc)...</textarea></td>
+         
+                    </tr>
+                    
+                    <tr><td height="50px" style="background-color:#6E6E6E;color: #ffffff;"><b>Fuel Type</b></td>
+                    
+                    <td><select name="fuel_type1" id="fuel_type"class="chosen"> 
+              <option value="0"></option>
+              <option value="1">Oil</option> 
+               <option value="2">Natural Gas</option> 
+                <option value="3">Diesel</option> 
+                </select></td>
+                <td><select name="fuel_type2"  class="chosen"> 
+              <option value="0"></option>
+              <option value="1">Oil</option> 
+               <option value="2">Natural Gas</option> 
+                <option value="3">Diesel</option> 
+                </select></td>
+                <td><select name="fuel_type3" class="chosen"> 
+              <option value="0"></option>
+              <option value="1">Oil</option> 
+               <option value="2">Natural Gas</option> 
+                <option value="3">Diesel</option> 
+                </select></td>
+                    </tr>
+                    
+                    <tr><td height="50px" style="background-color:#6E6E6E; color: #ffffff;"><b>Electrical Connection</b></td>
+                    <td><select name="electrical_connection1" class="chosen" id="electrical_connection"> 
+              <option value="0"></option> 
+              <option value="1">break-before-make</option> 
+               <option value="2">soft transfer</option> 
+                <option value="3">Parallel Interconnection</option> 
+                 <option value="4">I dont know</option> 
+              </select></td>
+              
+              <td><select name="electrical_connection2" class="chosen" > 
+              <option value="0"></option> 
+              <option value="1">break-before-make</option> 
+               <option value="2">soft transfer</option> 
+                <option value="3">Parallel Interconnection</option> 
+                 <option value="4">I dont know</option> 
+              </select></td>
+              
+              <td><select name="electrical_connection3" class="chosen" > 
+              <option value="0"></option> 
+              <option value="1">break-before-make</option> 
+               <option value="2">soft transfer</option> 
+                <option value="3">Parallel Interconnection</option> 
+                 <option value="4">I dont know</option> 
+              </select></td>
+                    </tr>
+                    
+            </tbody>
+         </table>
+            
+            </div>
+            
+            
+            <p class="colored-bar bluebar" id="dropportunity"><font size="5">DR Opportunity</font></p>
+            
+            
+            
+              
+              <div id="options_table" style="overflow:scroll;width: 740px; overflow:auto; margin-left:100px;"></div>
+              <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/>
+
+               <button type="button" id="submit" onClick="return check()" value="Submit">Submit</button>
+              
+ 
+
+ </form>
+          </div>
+            
+        </div>
+        </div>
+    
+ <!-- START javascript -->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+   
+    <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="js/chosen.jquery.js" ></script>
+    <script type="text/javascript" src="js/proto.chosen.js" ></script>
+    <script type="text/javascript" src="js/quicktool.js"></script>
+   
+
+   <script type="text/javascript">
+  jQuery(document).ready(function(){
+	jQuery(".chosen").chosen();
+});
+
+ 
+</script>  
+
+
+
+
+<script type="text/javascript"> 	
+    function getOther(sel){
+    if (sel.value=='Other')
+    {
+    
+	    $('#'+sel.id).parent().append('<div class="'+sel.id+'__old" <br><b>Other</b><input id="'+sel.id+'" name="'+sel.id+'">')
+      sel.id = sel.id +'__old';
+      console.log(sel.id)
+     }
+     else
+     {
+       
+
+       $('.'+sel.id).hide();
+        sel.id = sel.id.split('__')[0]
+     }
+ 
+}
+
+
+
+</script>
+
+<script type="text/javascript">
+var defaultMsg = 'List the loads, if known(Elevators, Computers, lighting, etc)...';
+function setMessage (txt, active) {
+    if (txt == null) return;
+    
+    if (active) {
+        if (txt.value == defaultMsg) txt.value = '';
+    } else {
+        if (txt.value == '') txt.value = defaultMsg;
+    }
+}
+
+ 
+window.onload=function() { setMessage(document.getElementById('txtArea', false)); }
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+function check(){
+
+var accepted=null;
+
+if (form.zip.value.length == 0) {
+alert("Please enter Zipcode.");
+form.zip.focus();
+return false;
+}
+
+if (form.utility.selectedIndex == 0) {
+alert("Please enter utility.");
+form.utility.focus();
+return false;
+}
+if (form.advanced_notice.selectedIndex == 0) {
+alert("Please enter Advanced Notice.");
+form.advanced_notice.focus();
+return false;
+}
+
+if (form.facility_curtail.value.length == 0) {
+alert("Please enter Curtailable Load .");
+form.facility_curtail.focus();
+return false;
+}
+if (form.duration.selectedIndex == 0) {
+alert("Please enter Duration.");
+form.duration.focus();
+return false;
+}
+if (form.frequency.selectedIndex == 0) {
+alert("Please enter Frequency.");
+form.frequency.focus();
+return false;
+}
+
+}
+</script>
+
+
+
+<script type="text/javascript">
+function scrollToElement(selector, time, verticalOffset) {
+    time = typeof(time) != 'undefined' ? time : 1000;
+    verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+    element = $(selector);
+    offset = element.offset();
+    offsetTop = offset.top + verticalOffset;
+    $('html, body').animate({
+        scrollTop: offsetTop
+    }, time);
+}
+
+$('a#DR').click(function () {
+    scrollToElement('#dropportunity');
+});
+$('a#location').click(function () {
+    scrollToElement('#fac_loc');
+});
+$('a#type').click(function () {
+    scrollToElement('#fac_type');
+});
+$('a#curtailment').click(function () {
+    scrollToElement('#curtailment_capability');
+});
+$('a#generator').click(function () {
+    scrollToElement('#standbygen');
+});
+$('a#top').click(function () {
+    scrollToElement('#header');
+});
+
+</script>
+
+
+
+
+
+
+ </body>
+ </html>
