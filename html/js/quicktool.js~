@@ -7,7 +7,11 @@ $(function(){
 
  })
 
-
+$('#submit').click(function(){
+  save();
+ //$('#options_table').html('<br/><br/><div id="progress"><img src="img/loading.gif" width="23px" height="23px">Loading...</div><br/><br/>')
+  
+})
 
 });
 
@@ -35,7 +39,7 @@ function  save(){
     });
   $.ajax({
     data:data,
-    url:'http://72.167.42.223:9999/save',
+    url:'http://127.0.0.1:9999/save',
     success:function(data)
 	{
 	
@@ -119,7 +123,7 @@ return false;
 else
 {
 $('#options_table').html('<br/><br/><div id="progress"><img src="img/loading.gif" width="23px" height="23px">Loading...</div><br/><br/>')
-save()  
+  
 }
 }
 
@@ -213,9 +217,10 @@ $('#prog_table').html('')
      $('#genreport').click(function(){
     final_array = genReport()
     $.ajax({
-    url: 'http://72.167.42.223:9999/generateReport',
+    url: 'http://127.0.0.1:9999/generateReport',
     data: {data:JSON.stringify(final_array) },
     success: function(data) {
+  
       window.location = data
     }
     });
