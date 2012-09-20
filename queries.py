@@ -169,7 +169,6 @@ def filterDuplicates(final_options,final_option):
 def filterOptions(model,options,cur,conn):
   query_extension = genQuery(model)
   final_options = []
-  import pdb; pdb.set_trace()
   for option in options:
     final_option = []
     programs = option.options
@@ -178,10 +177,8 @@ def filterOptions(model,options,cur,conn):
       estring = estring + query_extension
       cur.execute(estring)
       program = cur.fetchone()
-      print(prog_id)
       if program != None:
         final_option.append(program)
-      #else: import pdb; pdb.set_trace()
     final_options = filterDuplicates(final_options,final_option)
   return final_options
 
@@ -213,7 +210,6 @@ def getPrograms(get_data,conn,cur):
     final_list.append(option_list)
   sorted_final_list = sorted(final_list, lambda x,y: 1 if x.total_value>y.total_value else -1 if x.total_value<y.total_value else 0)
   sorted_final_list.reverse()
-  print(sorted_final_list)
   return sorted_final_list
 
 
@@ -325,4 +321,4 @@ def saveQuery(get_data):
   programs = getPrograms(get_data,conn,cur)
   cur.close()
   conn.close()
-  return 'sucess'
+  return programs

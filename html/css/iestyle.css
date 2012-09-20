@@ -3,52 +3,49 @@
 #logo
 {
 	float:left; cursor:pointer;
- 
   
 }
+	
 
   
     
 body
 {
-  font-family: Verdana,Arial,sans-serif; font-size: 1.4em; 
-	
+  font-family: Verdana,Arial,sans-serif; font-size: 1.1em; 
+	height:500px;
   
-	/*width:980px;*/
+	width:980px;
 	margin:0 auto;
 	padding:0px 0px 0px 0px;
-	/*background-image:url('../img/background.png');
-background-size:100% 100%;*/
-
-
 	
+
+		text-align:center;
   margin: 0px;
   padding:0px;
-  text-align:center;
   
 }
-
 
 .facility
 {
-margin-left:-20px;
+
+margin-left:-330px;
+
+
 }
 
 p.bluebar
-{
-color: #389EFD;
+{border-bottom: 3px solid #57B6DD;
+color: #57B6DD;
 padding: 4px 0 5px 0;
+width: 720px;
+clear: both;
 display: block;
-font-size: 1.2em;
-
-text-align:center;
-
+font-size: 1.8em;
+line-height: 1.4em;
+font-weight: bold;
+color: #57B6DD;
 
 }
-/*border-bottom: 4px solid #57B6DD;
-
-line-height: 1.4em;*/
-
 
 .inputfield
 {
@@ -67,14 +64,7 @@ color: #4D4D4D;
 	width:980px; height:100px;
 	margin-left:5px;
 	padding:0px 0px 0px 0px;
-
-}
-#map_canvas
-{
-
-
-
-
+	background-color:;
 }
 .group.half {
 margin-left:500px;
@@ -86,17 +76,17 @@ position: relative;
 .forms {
 position: relative;
 float: left;
-margin-left:-120px;
+margin-left:-420px;
 width: 775px;
 
 }
 #Frame {
-margin-left:570px;
-width: 1240px;
+margin-right:370px;
+
 
 height:2500px;
-margin-top:20px;
-
+margin-top:-900px;
+float:right;
 }
 #meterdata
 {
@@ -139,18 +129,22 @@ float: left;
 .form2
 {
 width:770px;
-margin-left:-320px;
+margin-left:-200px;
 position: relative;
-float: left;
 
+
+}
+p#meter
+{
+
+margin-left: -330px;
 }
 .form3
 {
 width:770px;
-margin-left:-240px;
+margin-left:-500px;
 position: relative;
 float: left;
-font-size: 20px;
 
 }
 #curtailment_capability
@@ -170,7 +164,7 @@ float: left;
 }
 #curtail_fac
 {
-margin-left:-148px;
+margin-left:-155px;
 }
 #dropportunity
 {
@@ -181,7 +175,7 @@ float: left;
 }
 #durationtext
 {
-margin-left:-38px;
+margin-left:-25px;
 
 }
 #duration
@@ -193,48 +187,14 @@ width:40%;
 width:40%;
 }
 
-.upload-button
-  {
--moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
-	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
-	background-color:#79bbff;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #84bbf3;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:1px 1px 0px #528ecc;
-  margin-left:205px;
 
-}
 
-.upload-button:hover
+#upload
 {
- 
-   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
-	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
-	background-color:#378de5;
 
+margin-left:-400px;
+width:700px;
 }
-.upload-button:active
-{
-position:relative;
-	top:1px;
-}
-
-
 .html-text-box
 {
  font-family: Verdana,Arial,sans-serif; font-size: 0.9em;
@@ -247,6 +207,14 @@ height:100%;
 .file_uploader
 {
 width:720px;
+}
+#sidebar
+{
+
+float:left;
+margin-left:-1130px;
+width:100%;
+margin-top: 400px;
 }
 
 .chosen
@@ -261,49 +229,42 @@ width:40%;
 
 table, th, tr, td {
 border-style:solid;
-
+border-width: 2px;
 border-color: black;
 text-align: center;
-
 }
 
-
-#topnav
-{
-
-margin-top:-20px;
+tbody th, tbody td {
+border-top: 1px solid #BBB;
+border-bottom: 1px solid #BBB;
 }
-
-
 
 #fixed-nav {
   position: fixed;
   z-index: 1;
   left: 0;
-  top: 410px;
+  top: 407px;
    
 }
 
-#fixed-nav li 
-{
-  margin: 0 0 43px;
-  list-style: none;
-  margin-left:-75px;
- 
+#fixed-nav li {
+  margin: 0 0 142px;
+  list-style-type: none;
+  list-style-image: none;
+  margin-left:-490px;
+  
 }
-
-
 
 #location
 {
 border:2px solid #a1a1a1;
-padding: 17.5px 36.8px;
+padding: 19px 20.8px;
 background:#39528C;
 
 border-bottom-right-radius:22px;
 text-decoration:none;
 color:ffffff;
-margin-left:25px;
+margin-left:-35px;
 
 -webkit-transition:0.4s all ease-in-out;
 
@@ -319,7 +280,6 @@ background-color:#958E8E;
 
 }
 
-
 #type
 {
 border:2px solid #a1a1a1;
@@ -329,7 +289,7 @@ background:#39528C;
 border-bottom-right-radius:22px;
 text-decoration:none;
 color:ffffff;
-margin-left:31px;
+margin-left:-91px;
 
 -webkit-transition:0.4s all ease-in-out;
 
@@ -343,17 +303,18 @@ background-color:#958E8E;
 
 
 }
+
 #curtailment
 {
 border:2px solid #a1a1a1;
 
-padding: 21.5px 5px;
+padding: 21.5px 35px;
 background:#39528C;
-width:100px;
+
 border-bottom-right-radius:22px;
 text-decoration:none;
 color:ffffff;
-margin-left:29px;
+margin-left:-129px;
 
 -webkit-transition:0.4s all ease-in-out;
 
@@ -372,14 +333,13 @@ background-color:#958E8E;
 
 }
 
-
 #generator
 {
 border:2px solid #a1a1a1;
-padding:18.6px 15px; 
+padding:18.6px 1px; 
 background:#39528C;
-margin-left:30px;
-width:300px;
+margin-left:-70px;
+
 border-bottom-right-radius:22px;
 text-decoration:none;
 color:ffffff;
@@ -397,13 +357,12 @@ background-color:#958E8E;
 }
 
 
-
 #DR
 {
 border:2px solid #a1a1a1;
-padding:17.6px 37px; 
+padding:20px;
 background:#39528C;
-width:300px;
+
 border-bottom-right-radius:22px;
 text-decoration:none;
 color:ffffff;
@@ -423,13 +382,14 @@ background-color:#958E8E;
 -webkit-transition:0.3s all ease-in-out;
 }
 
+
 #top
 {
 border:2px solid #a1a1a1;
 padding:19.5px 56px; 
 background:#585858;
 
-width:300px;
+
 border-bottom-right-radius:22px;
 text-decoration:underline;
 color:#ffffff;
@@ -450,10 +410,10 @@ background-color: #958E8E;
 
 #gentabs
 {
-width:40%;
-margin-left:-250px;
-}
+width:-120%;
+margin-left:100px;
 
+}
 
 #submit
   {
@@ -477,7 +437,7 @@ margin-left:-250px;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #528ecc;
-  margin-left:-160px;
+  margin-left:-60px;
 
 }
 
@@ -495,18 +455,3 @@ margin-left:-250px;
 position:relative;
 	top:1px;
 }
-
-
-#season
-{
-margin-left:280px;
-width:40%;
-}
-
-#year
-{
-width:40%;
-margin-left:280px;
-}
-
-

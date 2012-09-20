@@ -7,6 +7,11 @@ $(function(){
 
  })
 
+$('#submit').click(function(){
+  save();
+
+})
+
 });
 
 
@@ -26,6 +31,7 @@ function validate(val)
 }
 
 function  save(){
+  alert('asd')
   data = {}
   $.each($('form :input'),function(key,val)
     {
@@ -35,7 +41,116 @@ function  save(){
     data:data,
     url:'http://127.0.0.1:9999/save',
     success:function(data){
-      x = data
+      table_data = JSON.parse(data)
     }
   })
 }
+
+function scrollToElement(selector, time, verticalOffset) {
+   time = typeof(time) != 'milliseconds' ? time : 1000;
+    verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+    element = $(selector);
+    offset = element.offset();
+    offsetTop = offset.top + verticalOffset;
+    $('html, body').animate({
+        scrollTop: offsetTop
+    }, time, jQuery.easing.def = "easeInOutQuad");
+  
+
+}
+
+$('a#DR').click(function () {
+    scrollToElement('#dropportunity');
+});
+$('a#location').click(function () {
+    scrollToElement('#fac_loc');
+});
+$('a#type').click(function () {
+    scrollToElement('#fac_type');
+});
+$('a#curtailment').click(function () {
+    scrollToElement('#curtailment_capability');
+});
+$('a#generator').click(function () {
+    scrollToElement('#standbygen');
+});
+$('a#top').click(function () {
+    scrollToElement('#header');
+});
+
+
+function check(){
+
+var accepted=null;
+
+if (form.zip.value.length == 0) {
+alert("Please enter Zipcode.");
+form.zip.focus();
+return false;
+}
+
+if (form.utility.selectedIndex == 0) {
+alert("Please enter utility.");
+form.utility.focus();
+return false;
+}
+if (form.advanced_notice.selectedIndex == 0) {
+alert("Please enter Advanced Notice.");
+form.advanced_notice.focus();
+return false;
+}
+
+if (form.facility_curtail.value.length == 0) {
+alert("Please enter Curtailable Load .");
+form.facility_curtail.focus();
+return false;
+}
+if (form.duration.selectedIndex == 0) {
+alert("Please enter Duration.");
+form.duration.focus();
+return false;
+}
+if (form.frequency.selectedIndex == 0) {
+alert("Please enter Frequency.");
+form.frequency.focus();
+return false;
+}
+
+}
+
+var defaultMsg = 'List the loads, if known(Elevators, Computers, lighting, etc)...';
+function setMessage (txt, active) {
+    if (txt == null) return;
+    
+    if (active) {
+        if (txt.value == defaultMsg) txt.value = '';
+    } else {
+        if (txt.value == '') txt.value = defaultMsg;
+    }
+}
+
+ 
+window.onload=function() { setMessage(document.getElementById('txtArea', false)); }
+
+
+  function getOther(sel){
+    if (sel.value=='Other')
+    {
+    
+      $('#'+sel.id).parent().append('<div class="'+sel.id+'__old" <br><b>Other</b><input id="'+sel.id+'" name="'+sel.id+'">')
+      sel.id = sel.id +'__old';
+      console.log(sel.id)
+     }
+     else
+     {
+       
+
+       $('.'+sel.id).hide();
+        sel.id = sel.id.split('__')[0]
+     }
+ 
+}
+
+ jQuery(document).ready(function(){
+  jQuery(".chosen").chosen();
+});
