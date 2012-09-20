@@ -32,7 +32,6 @@ function validate(val)
 }
 
 function  save(){
-  //alert('asd')
   data = {}
   $.each($('form :input'),function(key,val)
     {
@@ -165,6 +164,23 @@ window.onload=function() { setMessage(document.getElementById('txtArea', false))
 
 
 
+
+function genReport()
+{
+  final_array = []
+  $.each($("#options_table input:checkbox:checked"),function(){
+   console.log(this); 
+   if (this.id.split('source').length<2) 
+    {
+      outer_class = $(this).attr('class');
+      outer_index = outer_class.split('source')[1] -1
+      inner_index = this.id
+      final_array.push(table_data[outer_index][inner_index])
+    } 
+  })
+  return final_array
+}
+
 function createOptionsTable(options)
 {
 
@@ -186,13 +202,27 @@ $('#prog_table').html('')
         options_tables_string += sprintf('<tr id="row_'+row_num+'"><td><input type="checkbox" id="'+row_num+'" class="'+sourcename+'"  value="" onclick="change(this);"></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>',this.program_name,this.aggregation,this.maximum_event_duration,this.average_event_duration,this.time_to_respond,this.average_number_of_events,this.yearly_earnings)
         row_num++;
       });
-      options_tables_string += '</table>'
+      options_tables_string += '</table> '
       }
       n++
       });
-  
+    
+ options_tables_string += '<br><br><button type="button" class="manage_facility" id="genreport">Generate Full Report</button>'
      $('#options_table').html(options_tables_string);
+     $('#genreport').click(function(){
+    final_array = genReport()
+    $.ajax({
+    url: 'http://127.0.0.1:9999/generateReport',
+    data: {data:JSON.stringify(final_array) },
+    success: function(data) {
+  
+      window.location = data
     }
+    });
+    });
+
+    }
+   
 	
     
 function toggle(source) {
