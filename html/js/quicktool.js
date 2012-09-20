@@ -9,7 +9,8 @@ $(function(){
 
 $('#submit').click(function(){
   save();
-
+$('#options_table').html('<br/><br/><div id="progress"><img src="img/loading.gif" width="23px" height="23px">Loading...</div><br/><br/>')
+   
 })
 
 });
@@ -31,7 +32,7 @@ function validate(val)
 }
 
 function  save(){
-  alert('asd')
+  //alert('asd')
   data = {}
   $.each($('form :input'),function(key,val)
     {
@@ -40,10 +41,14 @@ function  save(){
   $.ajax({
     data:data,
     url:'http://127.0.0.1:9999/save',
-    success:function(data){
+    success:function(data)
+	{
+	 $('#options_table').html('')
+
       table_data = JSON.parse(data)
+	   createOptionsTable(table_data)
     }
-  })
+  });
 }
 
 function scrollToElement(selector, time, verticalOffset) {
@@ -151,6 +156,64 @@ window.onload=function() { setMessage(document.getElementById('txtArea', false))
  
 }
 
+
+
  jQuery(document).ready(function(){
   jQuery(".chosen").chosen();
 });
+
+
+
+
+function createOptionsTable(options)
+{
+
+$('#prog_table').html('')
+  options_tables_string = '';
+  n = 1;
+  
+  $.each(options,function(){
+
+   if (n < 4) {
+
+      that = this;
+      var sourcename = "source"+n;
+     
+      options_tables_string += '<h1> Enrollment Option '+n+' </h1>'
+      options_tables_string += '<table class="prog_table_'+n+'" id="prog_table" ><thead style="background-color: #6E6E6E; color: #ffffff;"><th>Select All<br/><input type="checkbox"  id="'+sourcename+'" name="'+sourcename+'"value="" onclick="toggle(this)";></th><th>Program Name</th><th>Aggregation</th><th>Max Event Duration</th><th>Average Event Duration year</th><th>Advanced Noticed</th><th>Average Number of Events/year</th><th>Annual Payment</th></thead>'
+      row_num = 0
+      $.each(this,function(){
+        options_tables_string += sprintf('<tr id="row_'+row_num+'"><td><input type="checkbox" id="'+row_num+'" class="'+sourcename+'"  value="" onclick="change(this);"></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>',this.program_name,this.aggregation,this.maximum_event_duration,this.average_event_duration,this.time_to_respond,this.average_number_of_events,this.yearly_earnings)
+        row_num++;
+      });
+      options_tables_string += '</table>'
+      }
+      n++
+      });
+  
+     $('#options_table').html(options_tables_string);
+    }
+	
+    
+function toggle(source) {
+
+  checkboxes = document.getElementsByClassName(source.id);
+  
+  for(var i in checkboxes)
+  {
+  checkboxes[i].checked = source.checked;
+ 
+}
+
+}
+
+function change(obj) {
+
+var tr=obj.parentNode.parentNode; 
+tr.style.backgroundColor=(obj.checked)? '#ACFAE9':'#ffffff ';
+}
+
+
+
+
+
