@@ -9,8 +9,8 @@ $(function(){
 
 $('#submit').click(function(){
   save();
-$('#options_table').html('<br/><br/><div id="progress"><img src="img/loading.gif" width="23px" height="23px">Loading...</div><br/><br/>')
-   
+ //$('#options_table').html('<br/><br/><div id="progress"><img src="img/loading.gif" width="23px" height="23px">Loading...</div><br/><br/>')
+  
 })
 
 });
@@ -43,6 +43,7 @@ function  save(){
     url:'http://127.0.0.1:9999/save',
     success:function(data)
 	{
+	
 	 $('#options_table').html('')
 
       table_data = JSON.parse(data)
@@ -120,7 +121,11 @@ alert("Please enter Frequency.");
 form.frequency.focus();
 return false;
 }
-
+else
+{
+$('#options_table').html('<br/><br/><div id="progress"><img src="img/loading.gif" width="23px" height="23px">Loading...</div><br/><br/>')
+  
+}
 }
 
 var defaultMsg = 'List the loads, if known(Elevators, Computers, lighting, etc)...';

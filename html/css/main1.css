@@ -71,7 +71,7 @@ color: #4D4D4D;
 }
 #progress
 {
-margin-right:30px;
+margin-right:1px;
 
 }
 .group.half {
@@ -301,7 +301,7 @@ background:#39528C;
 border-bottom-right-radius:22px;
 text-decoration:none;
 color:ffffff;
-margin-left:25px;
+margin-left:30px;
 
 -webkit-transition:0.4s all ease-in-out;
 
@@ -321,13 +321,13 @@ background-color:#958E8E;
 #type
 {
 border:2px solid #a1a1a1;
-padding: 17px 22px;
+padding: 17px 22.9px;
 background:#39528C;
 
 border-bottom-right-radius:22px;
 text-decoration:none;
 color:ffffff;
-margin-left:31px;
+margin-left:33px;
 
 -webkit-transition:0.4s all ease-in-out;
 
@@ -374,11 +374,11 @@ background-color:#958E8E;
 #generator
 {
 border:2px solid #a1a1a1;
-padding:18.6px 15px; 
+padding:18.6px 15.8px; 
 background:#39528C;
 margin-left:30px;
-width:300px;
-border-bottom-right-radius:22px;
+
+border-bottom-right-radius:21.8px;
 text-decoration:none;
 color:ffffff;
 
