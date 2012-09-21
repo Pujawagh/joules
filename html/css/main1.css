@@ -370,7 +370,9 @@ background-color:#958E8E;
 
 }
 
-
+.selected { background-color: #ffff00; }
+.on {background-color:#84C1DF;}
+ .off {background-color:white;}
 #generator
 {
 border:2px solid #a1a1a1;
@@ -381,7 +383,6 @@ margin-left:24px;
 border-bottom-right-radius:21.8px;
 text-decoration:none;
 color:ffffff;
-
 -webkit-transition:0.4s all ease-in-out;
 
 }

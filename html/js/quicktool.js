@@ -200,7 +200,7 @@ $('#prog_table').html('')
       options_tables_string += '<table class="prog_table_'+n+'" id="prog_table" ><thead style="background-color: #6E6E6E; color: #ffffff;"><th>Select All<br/><input type="checkbox"  id="'+sourcename+'" name="'+sourcename+'"value="" onclick="toggle(this)";></th><th>Program Name</th><th>Aggregation</th><th>Max Event Duration</th><th>Average Event Duration year</th><th>Advanced Noticed</th><th>Average Number of Events/year</th><th>Annual Payment</th></thead>'
       row_num = 0
       $.each(this,function(){
-        options_tables_string += sprintf('<tr id="row_'+row_num+'"><td><input type="checkbox" id="'+row_num+'" class="'+sourcename+'"  value="" onclick="change(this);"></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>',this.program_name,this.aggregation,this.maximum_event_duration,this.average_event_duration,this.time_to_respond,this.average_number_of_events,this.yearly_earnings)
+        options_tables_string += sprintf('<tbody><tr id="row_'+row_num+'"><td><input type="checkbox" id="'+row_num+'" class="'+sourcename+'"  value="" onclick="change(this);"></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr></tbody>',this.program_name,this.aggregation,this.maximum_event_duration,this.average_event_duration,this.time_to_respond,this.average_number_of_events,this.yearly_earnings)
         row_num++;
       });
       options_tables_string += '</table> '
@@ -235,7 +235,23 @@ function toggle(source) {
  
 }
 
+
+    $('tr :checkbox').change(function() {
+        $(this).closest('tr').toggleClass('selected', this.checked);
+    });
+    $('thead :checkbox').change(function() {
+        $('tr:checkbox').trigger('change');
+    });
+
+// $('input:checked').attr('checked', source); //select all checkbox
+  //  if(source) {
+      //   $("table").css("backgroundColor", "#ddd"); //new color
+   // } else {
+   //      $("table").css("backgroundColor", "#fff"); //old color
+  //  }
 }
+
+
 
 function change(obj) {
 
