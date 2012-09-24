@@ -47,13 +47,13 @@
 
 <nav id="fixed-nav">
 		<ul class="fixed-nav">
-			<li><a href="#"id="location"> <font size="3.7px"> Facility Location</font></a></li>
-			 <li><a href="#" id="type" ><font size="3.7px">Upload Meter Data</a></li>
+			<li><a href="#" id="location" class="show_hide location"> <font size="3.7px"> Facility Location</font></a></li>
+			 <li><a href="#" id="type" class="show_hide type"><font size="3.7px">Upload Meter Data</a></li>
    
-      <li><a href="#" id="curtailment"><font size="3px">Curtailment Capability</a></li>
-	    <li><a href="#" id="generator"><font size="3.7px">Stand-By Generator</a></li>
+      <li><a href="#" id="curtailment"  class="show_hide curtailment"><font size="3px">Curtailment Capability</a></li>
+	    <li><a href="#" id="generator" class="show_hide generator"><font size="3.7px">Stand-By Generator</a></li>
 	  
-      <li><a href="#" id="DR"><font size="3.7px">DR opportunity</a></li> 
+      <li><a href="#" id="DR" class="show_hide dr"><font size="3.7px">DR opportunity</a></li> 
 			<li><a href="#" id="top"><font size="3.7px">Back to Top </a></li><br/>														
 		</ul>
 	</nav>
@@ -68,7 +68,7 @@
           <input type="hidden" name="user" value="twisterius">
           <div class="forms">
 		  
-
+<div class="show_hide location">
           <p class="colored-bar bluebar" id="fac_loc"><font size="6">Facility Location</font>
 		   <hr width="135%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-165px;"></p>
             <div id="address"class="address">Address<br/>
@@ -90,11 +90,59 @@
           
              <font color="#bb0000"><b>*</b></font>Utility</font>
  <select class="chosen" name="utility" id="utility" style="width:230px;">
-                <option value="0"></option>
-              <option value="1">Con Edison</option>
-                 <option value="2">NYSEG</option>
-                    <option value="3">RGE</option>
-                       <option value="4">Niagara Mohawk</option>
+               <option value="Ohio">Ohio</option>
+                <option value="Sacramento">Sacramento</option>
+                <option value="Delmarva">Delmarva</option>
+                <option value="Baltimore">Baltimore</option>
+                <option value="Centerpoint">Centerpoint</option>
+                <option value="Duke">Duke</option>
+                <option value="Allegheny">Allegheny</option>
+                <option value="Appalachian">Appalachian</option>
+                <option value="Penelec">Penelec</option>
+                <option value="PPL">PPL</option>
+                <option value="Monogahela">Monogahela</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Duke">Duke</option>
+                <option value="El">El</option>
+                <option value="San">San</option>
+                <option value="Sacamento">Sacamento</option>
+                <option value="AEP">AEP</option>
+                <option value="Delmarva">Delmarva</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="NYPA">NYPA</option>
+                <option value="ComEd">ComEd</option>
+                <option value="West">West</option>
+                <option value="PECO">PECO</option>
+                <option value="Delmarva">Delmarva</option>
+                <option value="AEP">AEP</option>
+                <option value="Pacific">Pacific</option>
+                <option value="PECO">PECO</option>
+                <option value="Con">Con</option>
+                <option value="Maryland-PEPCO">Maryland-PEPCO</option>
+                <option value="Potomac">Potomac</option>
+                <option value="CAISO">CAISO</option>
+                <option value="West">West</option>
+                <option value="PJM">PJM</option>
+                <option value="Texas-New">Texas-New</option>
+                <option value="AEP">AEP</option>
+                <option value="CPS">CPS</option>
+                <option value="Marlyand-PEPCO">Marlyand-PEPCO</option>
+                <option value="Toledo">Toledo</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Southern">Southern</option>
+                <option value="PEPCO-DC">PEPCO-DC</option>
+                <option value="AEP">AEP</option>
+                <option value="Austin">Austin</option>
+                <option value="Xcel">Xcel</option>
+                <option value="Met-Ed">Met-Ed</option>
+                <option value="Sacramento">Sacramento</option>
+                <option value="The">The</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Oncor">Oncor</option>
+                <option value="Glendale">Glendale</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="PPL">PPL</option>
+                <option value="Appalachian">Appalachian</option>
 					<option value="5">Other (Utility name)</option>
           </select>
           </div>
@@ -102,11 +150,12 @@
             <br>
             </div>
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-			
+	</div>
+  <div class="show_hide type">		
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
              
-             <p class="colored-bar bluebar" id="fac_type"><font size="6">Upload Meter Data</font>
+             <p class="colored-bar bluebar" id="fac_type" ><font size="6">Upload Meter Data</font>
 			 <hr width="153%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-285px;"></p>
            <div class="form2">
              <div class="facility">
@@ -279,10 +328,10 @@ Upload a file
           </div>
           <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>
 		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		  
+		  </div>
           <!---######################################################################################-->
-          
-             <p class="colored-bar bluebar" id="curtailment_capability"><font size="6">Curtailment Capability</font></p>
+          <div class="show_hide curtailment">
+             <p class="colored-bar bluebar" id="curtailment_capability" ><font size="6">Curtailment Capability</font></p>
 			 <hr width="155%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-300px;">
              <br/><br/>
              <div class="form3">
@@ -331,8 +380,9 @@ Upload a file
             
   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-
+     </div>
 <!---######################################################################################-->
+            <div class="show_hide generator">
             <p class="colored-bar bluebar" id="standbygen"><font size="6">Stand-By Generator</font></p>
 			
             <div class="form4">
@@ -459,9 +509,10 @@ Upload a file
             </tbody>
          </table>
             <br/> <br/><br/> <br/><br/>
+          </div>
 			<!---######################################################################################-->
             
-            
+            <div class="show_hide dr">
             <p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font></p>
              <hr width="159%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-310px;">
             
@@ -493,7 +544,7 @@ Upload a file
 			  
               <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/>
 
-              
+              </div>
                <button type="button" id="submit" onClick="return check()" value="Submit">Submit</button>
  
 
