@@ -47,14 +47,18 @@
 
 <nav id="fixed-nav">
 		<ul class="fixed-nav">
-			<li><a href="#"id="location"> <font size="3.7px"> Facility Location</font></a></li>
-			 <li><a href="#" id="type" ><font size="3.7px">Upload Meter Data</a></li>
+			<li><a href="#" id="location" class="show_hide location"> <font size="3.7px"> Facility Location</font></a></li>
+			 <li><a href="#" id="type" class="show_hide type"><font size="3.7px">Upload Meter Data</a></li>
    
-      <li><a href="#" id="curtailment"><font size="3px">Curtailment Capability</a></li>
-	    <li><a href="#" id="generator"><font size="3.7px">Stand-By Generator</a></li>
+      <li><a href="#" id="curtailment"  class="show_hide curtailment"><font size="3px">Curtailment Capability</a></li>
+	    <li><a href="#" id="generator" class="show_hide generator"><font size="3.7px">Stand-By Generator</a></li>
 	  
+<<<<<<< HEAD
       <div id="dropp"></div>
 	  <!--<li><a href="#" id="DR"><font size="3.7px">DR opportunity</a></li> -->
+=======
+      <li><a href="#" id="DR" class="show_hide dr"><font size="3.7px">DR opportunity</a></li> 
+>>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
 			<li><a href="#" id="top"><font size="3.7px">Back to Top </a></li><br/>														
 		</ul>
 	</nav>
@@ -71,7 +75,11 @@
 		  <p id="field"><font color="#bb0000"><b>*</b></font><em> Indicates required fields.</em></p>
           <div class="forms">
 		  
+<<<<<<< HEAD
 <br><br>
+=======
+<div class="show_hide location">
+>>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
           <p class="colored-bar bluebar" id="fac_loc"><font size="6">Facility Location</font>
 		   <hr width="135%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-165px;"></p>
             <div id="address"class="address">Address<br/>
@@ -97,6 +105,7 @@
             
           
              <font color="#bb0000"><b>*</b></font>Utility</font>
+<<<<<<< HEAD
  <select class="chosen" name="utility" id="utility" style="width:230px" onchange="getOther1(this);">
                 <option value="0"></option>
               <option value="1">Con Edison</option>
@@ -104,18 +113,87 @@
                     <option value="3">RGE</option>
                        <option value="4">Niagara Mohawk</option>
 					<option value="5">Other</option>
+=======
+ <select class="chosen" name="utility" id="utility" style="width:230px;">
+                <option value="Ohio Edison">Ohio Edison</option>
+                <option value="Sacramento Municipal Utility Department">Sacramento Municipal Utility Department</option>
+                <option value="Delmarva Power & Light Company">Delmarva Power & Light Company</option>
+                <option value="Baltimore Gas & Electric">Baltimore Gas & Electric</option>
+                <option value="Centerpoint Energy">Centerpoint Energy</option>
+                <option value="Duke Energy">Duke Energy</option>
+                <option value="Allegheny Power">Allegheny Power</option>
+                <option value="Appalachian Power Company">Appalachian Power Company</option>
+                <option value="Penelec">Penelec</option>
+                <option value="PPL Electric Utilities">PPL Electric Utilities</option>
+                <option value="Monogahela Power Company">Monogahela Power Company</option>
+                <option value="Ohio Edison, The Illuminating Company, Toledo Edison">Ohio Edison, The Illuminating Company, Toledo Edison</option>
+                <option value="Duke Energy Ohio">Duke Energy Ohio</option>
+                <option value="El Paso Electric Company">El Paso Electric Company</option>
+                <option value="San Diego Gas and Electric Co">San Diego Gas and Electric Co</option>
+                <option value="Sacamento Municipal Utility Department">Sacamento Municipal Utility Department</option>
+                <option value="AEP Ohio">AEP Ohio</option>
+                <option value="Delmarva Power & Light Co">Delmarva Power & Light Co</option>
+                <option value="Kentucky Power">Kentucky Power</option>
+                <option value="NYPA">NYPA</option>
+                <option value="ComEd">ComEd</option>
+                <option value="West Penn">West Penn</option>
+                <option value="PECO Energy">PECO Energy</option>
+                <option value="Delmarva Power & Light Co.">Delmarva Power & Light Co.</option>
+                <option value="AEP Texas Southwestern Company">AEP Texas Southwestern Company</option>
+                <option value="Pacific Gas and Electric Co">Pacific Gas and Electric Co</option>
+                <option value="PECO Energy Company">PECO Energy Company</option>
+                <option value="Con Edison">Con Edison</option>
+                <option value="Maryland-PEPCO">Maryland-PEPCO</option>
+                <option value="Potomac Edison Company">Potomac Edison Company</option>
+                <option value="CAISO">CAISO</option>
+                <option value="West Penn">West Penn</option>
+                <option value="PJM">PJM</option>
+                <option value="Texas-New Mexico Power Company">Texas-New Mexico Power Company</option>
+                <option value="AEP Texas Central Company">AEP Texas Central Company</option>
+                <option value="CPS Energy">CPS Energy</option>
+                <option value="Marlyand-PEPCO Tariff">Marlyand-PEPCO Tariff</option>
+                <option value="Toledo Edison">Toledo Edison</option>
+                <option value="Indiana Michigan Power">Indiana Michigan Power</option>
+                <option value="Southern California Edison Co">Southern California Edison Co</option>
+                <option value="PEPCO-DC">PEPCO-DC</option>
+                <option value="AEP Texas North Company">AEP Texas North Company</option>
+                <option value="Austin Energy">Austin Energy</option>
+                <option value="Xcel Energy">Xcel Energy</option>
+                <option value="Met-Ed">Met-Ed</option>
+                <option value="Sacramento Municipal Utility District">Sacramento Municipal Utility District</option>
+                <option value="The Illuminating Company">The Illuminating Company</option>
+                <option value="Maryland - PEPCO">Maryland - PEPCO</option>
+                <option value="Oncor Electric Delivery Company">Oncor Electric Delivery Company</option>
+                <option value="Glendale Water and Power">Glendale Water and Power</option>
+                <option value="Pennsylvania Power Company">Pennsylvania Power Company</option>
+                <option value="PPL Electric">PPL Electric</option>
+                <option value="Appalachian Power Company/ Kingsport Power Company">Appalachian Power Company/ Kingsport Power Company</option>
+                <option value="Appalachian Power Company/Kingsport Power">Appalachian Power Company/Kingsport Power</option>
+
+					<option value="5">Other (Utility name)</option>
+>>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
           </select>
           </div>
           
             <br>
             </div>
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<<<<<<< HEAD
 			
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
              
              <p class="colored-bar bluebar" id="fac_type"><font size="6">Upload Meter Data</font>
 			 <hr width="153%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-285px;"></p><br/><br/>
+=======
+	</div>
+  <div class="show_hide type">		
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+             
+             <p class="colored-bar bluebar" id="fac_type" ><font size="6">Upload Meter Data</font>
+			 <hr width="153%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-285px;"></p>
+>>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
            <div class="form2">
              <div class="facility">
              Facility Type
@@ -286,11 +364,16 @@ Upload a file
      
           </div>
           <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>
+<<<<<<< HEAD
 		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		  
+=======
+		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		  </div>
+>>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
           <!---######################################################################################-->
-          
-             <p class="colored-bar bluebar" id="curtailment_capability"><font size="6">Curtailment Capability</font></p>
+          <div class="show_hide curtailment">
+             <p class="colored-bar bluebar" id="curtailment_capability" ><font size="6">Curtailment Capability</font></p>
 			 <hr width="155%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-300px;">
              <br/><br/><br/>
              <div class="form3">
@@ -339,8 +422,9 @@ Upload a file
             
   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-
+     </div>
 <!---######################################################################################-->
+            <div class="show_hide generator">
             <p class="colored-bar bluebar" id="standbygen"><font size="6">Stand-By Generator</font></p>
 			
             <div class="form4">
@@ -466,11 +550,20 @@ Upload a file
                     
             </tbody>
          </table>
+<<<<<<< HEAD
             <br/> <br/><br/> <br/><br/><br/><br/>
 			<!---######################################################################################-->
             
             
            <!-- <p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font>
+=======
+            <br/> <br/><br/> <br/><br/>
+          </div>
+			<!---######################################################################################-->
+            
+            <div class="show_hide dr">
+            <p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font></p>
+>>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
              <hr width="159%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-310px;">
             </p>-->
             <div id="dropport"></div>
@@ -488,7 +581,7 @@ Upload a file
 			  
               <br/><br/> <br/><br/> <br/>
 
-              
+              </div>
                <button type="button" id="submit" onClick="return check()" value="Submit">Submit</button>
  
 
