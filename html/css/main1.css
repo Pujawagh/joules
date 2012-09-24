@@ -370,13 +370,16 @@ background-color:#958E8E;
 
 }
 
-.selected { background-color: #ffff00; }
-.on {background-color:#84C1DF;}
- .off {background-color:white;}
+
+
+.selected { background-color:#ACFAE9; }
+
+
+
 #generator
 {
 border:2px solid #a1a1a1;
-padding:18.7px 15.8px; 
+padding:14.8px 15.8px 24px; 
 background:#39528C;
 margin-left:24px;
 
@@ -400,7 +403,7 @@ background-color:#958E8E;
 #DR
 {
 border:2px solid #a1a1a1;
-padding:17.6px 37px; 
+padding:12px 37px 25.9px; 
 background:#39528C;
 
 border-bottom-right-radius:22px;
@@ -425,7 +428,7 @@ background-color:#958E8E;
 #top
 {
 border:2px solid #a1a1a1;
-padding:19.5px 56px; 
+padding:11px 56.8px 26.8px; 
 background:#585858;
 
 width:300px;
@@ -494,7 +497,45 @@ margin-left:-250px;
 position:relative;
 	top:1px;
 }
+.manage_facility
+{
+-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background-color:#79bbff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #528ecc;
+  margin-left:-60px;
+}
 
+.manage_facility:hover
+{
+ 
+   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+	background-color:#378de5;
+
+}
+.manage_facility:active
+{
+position:relative;
+	top:1px;
+}
 
 #season
 {
@@ -508,4 +549,7 @@ width:40%;
 margin-left:280px;
 }
 
-
+#field
+{
+margin-left:-200px;
+}

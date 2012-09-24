@@ -112,13 +112,16 @@ form.duration.focus();
 return false;
 }
 if (form.frequency.selectedIndex == 0) {
-alert("Please enter Frequency.");
+alert("Please enter times a year.");
 form.frequency.focus();
 return false;
 }
 else
 {
+$('#dropp').html('<li><a href="#" id="DR"><font size="3.7px">DR opportunity</a></li>')
+$('#dropport').html('<p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font><hr width="159%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-310px;"></p>')
 $('#options_table').html('<br/><br/><div id="progress"><img src="img/loading.gif" width="23px" height="23px">Loading...</div><br/><br/>')
+$('#submit').hide();
 save()  
 }
 }
@@ -143,6 +146,24 @@ window.onload=function() { setMessage(document.getElementById('txtArea', false))
     {
     
       $('#'+sel.id).parent().append('<div class="'+sel.id+'__old" <br><b>Other</b><input id="'+sel.id+'" name="'+sel.id+'">')
+      sel.id = sel.id +'__old';
+      console.log(sel.id)
+     }
+     else
+     {
+       
+
+       $('.'+sel.id).hide();
+        sel.id = sel.id.split('__')[0]
+     }
+ 
+}
+
+ function getOther1(sel){
+    if (sel.value=='5')
+    {
+    
+      $('#'+sel.id).parent().append('<div class="'+sel.id+'__old" <b>Other</b><input id="'+sel.id+'" name="'+sel.id+'">')
       sel.id = sel.id +'__old';
       console.log(sel.id)
      }
@@ -187,6 +208,7 @@ function createOptionsTable(options)
 
 $('#prog_table').html('')
   options_tables_string = '';
+  
   n = 1;
   
   $.each(options,function(){
@@ -208,8 +230,9 @@ $('#prog_table').html('')
       n++
       });
     
- options_tables_string += '<br><br><button type="button" class="manage_facility" id="genreport">Generate Full Report</button>'
+  options_tables_string+= '<br><br><button type="button" class="manage_facility" id="genreport">Generate Full Report</button>'
      $('#options_table').html(options_tables_string);
+	
      $('#genreport').click(function(){
     final_array = genReport()
     $.ajax({
@@ -235,20 +258,15 @@ function toggle(source) {
  
 }
 
-
-    $('tr :checkbox').change(function() {
+    $('tbody :checkbox').change(function() {
         $(this).closest('tr').toggleClass('selected', this.checked);
+	
     });
     $('thead :checkbox').change(function() {
-        $('tr:checkbox').trigger('change');
+	
+        $('tbody :checkbox').trigger('change');
     });
 
-// $('input:checked').attr('checked', source); //select all checkbox
-  //  if(source) {
-      //   $("table").css("backgroundColor", "#ddd"); //new color
-   // } else {
-   //      $("table").css("backgroundColor", "#fff"); //old color
-  //  }
 }
 
 

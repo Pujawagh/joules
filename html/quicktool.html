@@ -27,7 +27,7 @@
     <div id="map_canvas">
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBwDgwqZ5_KhakKOkSxeG12gvpeeigBWrY&sensor=false"></script>
 <div id="topnav">
- <img src="img/index1.png" style="margin-left:-100px; height:290%; width:115%;"border="0" usemap="#Map" class="topnavigation" />
+ <img src="img/index1.png" style="margin-left:-100px; height:275%; width:108%;"border="0" usemap="#Map" class="topnavigation" />
 
 <map name="Map" id="Map">
 <area shape="rect" coords="0,0,30,12" href="#" />
@@ -53,7 +53,8 @@
       <li><a href="#" id="curtailment"><font size="3px">Curtailment Capability</a></li>
 	    <li><a href="#" id="generator"><font size="3.7px">Stand-By Generator</a></li>
 	  
-      <li><a href="#" id="DR"><font size="3.7px">DR opportunity</a></li> 
+      <div id="dropp"></div>
+	  <!--<li><a href="#" id="DR"><font size="3.7px">DR opportunity</a></li> -->
 			<li><a href="#" id="top"><font size="3.7px">Back to Top </a></li><br/>														
 		</ul>
 	</nav>
@@ -66,9 +67,11 @@
 <form name= "form" action="demo" method="post">
           <input type="hidden" name="fa_id" value="0">
           <input type="hidden" name="user" value="twisterius">
+		  
+		  <p id="field"><font color="#bb0000"><b>*</b></font><em> Indicates required fields.</em></p>
           <div class="forms">
 		  
-
+<br><br>
           <p class="colored-bar bluebar" id="fac_loc"><font size="6">Facility Location</font>
 		   <hr width="135%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-165px;"></p>
             <div id="address"class="address">Address<br/>
@@ -81,7 +84,12 @@
               <label>State</label>
               <select class="chosen" id="state" name="state" style="width:240px; ">
                 <option value="0"></option>
-                <option value="CT">CT</option><option value="DC">DC</option><option value="DE">DE</option><option value="MA">MA</option><option value="MD">MD</option><option value="MI">MI</option><option value="NJ">NJ</option><option value="NY">NY</option><option value="OH">OH</option><option value="PA">PA</option><option value="VA">VA</option><option value="WV">WV</option>              </select>
+                <option value="CT">CT</option><option value="DC">DC</option>
+				<option value="DE">DE</option><option value="MA">MA</option><option value="MD">MD</option>
+				<option value="MI">MI</option><option value="NJ">NJ</option><option value="NY">NY</option>
+				<option value="OH">OH</option><option value="PA">PA</option><option value="VA">VA</option>
+				<option value="WV">WV</option>           
+				</select>
             </div>
             <br/><br/>
            <div class="address"><font color="#bb0000"><b>*</b></font><label>Zip Code</label><br/>
@@ -89,13 +97,13 @@
             
           
              <font color="#bb0000"><b>*</b></font>Utility</font>
- <select class="chosen" name="utility" id="utility" style="width:230px;">
+ <select class="chosen" name="utility" id="utility" style="width:230px" onchange="getOther1(this);">
                 <option value="0"></option>
               <option value="1">Con Edison</option>
                  <option value="2">NYSEG</option>
                     <option value="3">RGE</option>
                        <option value="4">Niagara Mohawk</option>
-					<option value="5">Other (Utility name)</option>
+					<option value="5">Other</option>
           </select>
           </div>
           
@@ -103,11 +111,11 @@
             </div>
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 			
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
              
              <p class="colored-bar bluebar" id="fac_type"><font size="6">Upload Meter Data</font>
-			 <hr width="153%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-285px;"></p>
+			 <hr width="153%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-285px;"></p><br/><br/>
            <div class="form2">
              <div class="facility">
              Facility Type
@@ -278,13 +286,13 @@ Upload a file
      
           </div>
           <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>
-		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		  
           <!---######################################################################################-->
           
              <p class="colored-bar bluebar" id="curtailment_capability"><font size="6">Curtailment Capability</font></p>
 			 <hr width="155%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-300px;">
-             <br/><br/>
+             <br/><br/><br/>
              <div class="form3">
               <font color="#bb0000" size="3px"><b>*</b></font> Given 
             <select name="advanced_notice" id="advanced_notice" class="chosen">
@@ -329,7 +337,7 @@ Upload a file
             
             </div>
             
-  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 <!---######################################################################################-->
@@ -458,32 +466,19 @@ Upload a file
                     
             </tbody>
          </table>
-            <br/> <br/><br/> <br/><br/>
+            <br/> <br/><br/> <br/><br/><br/><br/>
 			<!---######################################################################################-->
             
             
-            <p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font></p>
+           <!-- <p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font>
              <hr width="159%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-310px;">
-            
-            
+            </p>-->
+            <div id="dropport"></div>
               
               <div id="options_table" style="overflow:scroll;width: 795px; overflow:auto; margin-right:300px;  margin-left:-150px;">
 			  
 			  	  
-			  <!--<table class="prog_table" id="prog_table" style="background-color:rgb(220, 248, 252); color: #0E5C9B; width:670px;" >
-			  <thead bgcolor="#6DB0E6"><th>Select All<br/><input type="checkbox"  id="sourcename" name="sourcename"value="" onclick="toggle(this);"></th>
-			  <th>Program Name</th><th>Aggregation</th><th>Max Event Duration</th><th>Average Event Duration year</th><th>Advanced Noticed</th>
-			  <th>Average Number of Events/year</th><th>Annual Payment</th>
-			  </thead>
-			  <tr>
-			  <td bgcolor="#93C1E6">
-			  <input type="checkbox" id="row_num" class="sourcename" name="possible_prog" value="" onclick="change(this);"></td>
 			  
-			  <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-			  
-			  </tr>
-			  
-			  </table>-->
 			  
 			  
 			  </div>
@@ -491,7 +486,7 @@ Upload a file
 			  
 			  
 			  
-              <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/>
+              <br/><br/> <br/><br/> <br/>
 
               
                <button type="button" id="submit" onClick="return check()" value="Submit">Submit</button>
@@ -509,16 +504,17 @@ Upload a file
    
     <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
     <script type="text/javascript" src="js/chosen.jquery.js" ></script>
-    <script type="text/javascript" src="js/proto.chosen.js" ></script>
+    
     <script type="text/javascript" src="js/quicktool.js"></script>
-	 <script type="text/javascript" src="js/ScrollSpy-compressed.js"></script>
-   <script type="text/javascript" src="js/ScrollSpy.js"></script>
+	<!-- <script type="text/javascript" src="js/ScrollSpy-compressed.js"></script>
+	<script type="text/javascript" src="js/proto.chosen.js" ></script>
+   <script type="text/javascript" src="js/ScrollSpy.js"></script>-->
  <script type="text/javascript" src="js/easing.js"></script>
    <script type="text/javascript" src="js/sprintf.js"></script> 
 
- <script type="text/javascript">
+ <!--<script type="text/javascript">
 $("#fixed-nav").ScrollSpy();
-</script>
+</script>-->
 
 
 
