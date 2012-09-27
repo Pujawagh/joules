@@ -27,7 +27,12 @@
     <div id="map_canvas">
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBwDgwqZ5_KhakKOkSxeG12gvpeeigBWrY&sensor=false"></script>
 <div id="topnav">
- <img src="img/index1.png" style="margin-left:-100px; height:275%; width:108%;"border="0" usemap="#Map" class="topnavigation" />
+<img src="img/bg.png" style="margin-left:-650px; box-shadow:10px 10px 5px #888888;" width="214.5%" height="215%" border="0" usemap="#Map" class="topnavigation" />
+
+<!--<img src="img/newheader.png"  style="margin-top:-280px; width:105%; height: 1040%; margin-left:-100px;" />-->
+<!--<img src="img/index3.png"  style="margin-top:-340px; width:115%; height: 1130%; margin-left:-1100px;" />
+<img src="img/headerlogo.png"  style="margin-top:-870px; width:95%;height:90%; margin-left:20px;" />-->
+<img src="img/mainlogo.png"  style="margin-top:-300px; width:109%; height:970%; margin-left:-1100px;" />
 
 <map name="Map" id="Map">
 <area shape="rect" coords="0,0,30,12" href="#" />
@@ -44,26 +49,29 @@
 <div class="group half" style="">
 
 
-
+<div id="sidebar">
+<img src="img/eras1.png" width="193%" height="120%"style=" margin-top: -35%;  margin-left: -78px;">
 <nav id="fixed-nav">
+
 		<ul class="fixed-nav">
-			<li><a href="#" id="location" class="show_hide location"> <font size="3.7px"> Facility Location</font></a></li>
-			 <li><a href="#" id="type" class="show_hide type"><font size="3.7px">Upload Meter Data</a></li>
+		
+			<li><a href="file:///C:/Users/Asus3/joules/html/quicktool.html#location" id="location" class="show_hide location"> <font size="3.7px"> Facility Location</font></a></li>
+			 <li><a href="file:///C:/Users/Asus3/joules/html/quicktool.html#type" id="type" class="show_hide type"><font size="3.7px">Upload Meter Data</a></li>
    
-      <li><a href="#" id="curtailment"  class="show_hide curtailment"><font size="3px">Curtailment Capability</a></li>
-	    <li><a href="#" id="generator" class="show_hide generator"><font size="3.7px">Stand-By Generator</a></li>
+      <li><a href="file:///C:/Users/Asus3/joules/html/quicktool.html#curtailment" id="curtailment"  class="show_hide curtailment"><font size="3px">Curtailment Capability</a></li>
+	    <li><a href="file:///C:/Users/Asus3/joules/html/quicktool.html#generator" id="generator" class="show_hide generator"><font size="3.7px">Stand-By Generator</a></li>
 	  
-<<<<<<< HEAD
+
       <div id="dropp"></div>
 	  <!--<li><a href="#" id="DR"><font size="3.7px">DR opportunity</a></li> -->
-=======
-      <li><a href="#" id="DR" class="show_hide dr"><font size="3.7px">DR opportunity</a></li> 
->>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
-			<li><a href="#" id="top"><font size="3.7px">Back to Top </a></li><br/>														
+
+      
+
+			<li><a href="file:///C:/Users/Asus3/joules/html/quicktool.html#" id="top"><font size="3.7px">Back to Top </a></li><br/>														
 		</ul>
 	</nav>
   
-  
+  </div>
   
   <div id="content">
 
@@ -71,17 +79,16 @@
 <form name= "form" action="demo" method="post">
           <input type="hidden" name="fa_id" value="0">
           <input type="hidden" name="user" value="twisterius">
-		  
-		  <p id="field"><font color="#bb0000"><b>*</b></font><em> Indicates required fields.</em></p>
+		  <p id="field" style="margin-top: -20px;"><font color="#bb0000"><b>*</b></font><em> <font size="4px">Indicates required fields.</font></em></p>
           <div class="forms">
 		  
-<<<<<<< HEAD
+
 <br><br>
-=======
+
 <div class="show_hide location">
->>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
-          <p class="colored-bar bluebar" id="fac_loc"><font size="6">Facility Location</font>
-		   <hr width="135%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-165px;"></p>
+
+          <p id="fac_loc"><font size="6" color="#000000">Facility Location</font>
+		  </p>
             <div id="address"class="address">Address<br/>
             <input class="inputfield" type="text" size="36" name="address" value="" style="width: 600px; height: 55px;" ></div>
            <br/><br/>
@@ -89,8 +96,7 @@
               <input class="inputfield" type="text" size="19" name="city" value="" style="width: 300px; height: 55px;">
             
           
-              <label>State</label>
-              <select class="chosen" id="state" name="state" style="width:240px; ">
+             <label>State</label>&nbsp;&nbsp;<select class="chosen" id="state" name="state" style="width:240px; ">
                 <option value="0"></option>
                 <option value="CT">CT</option><option value="DC">DC</option>
 				<option value="DE">DE</option><option value="MA">MA</option><option value="MD">MD</option>
@@ -105,16 +111,17 @@
             
           
              <font color="#bb0000"><b>*</b></font>Utility</font>
-<<<<<<< HEAD
- <select class="chosen" name="utility" id="utility" style="width:230px" onchange="getOther1(this);">
+
+ <!--<select class="chosen" name="utility" id="utility" style="width:230px" onchange="getOther1(this);">
                 <option value="0"></option>
               <option value="1">Con Edison</option>
                  <option value="2">NYSEG</option>
                     <option value="3">RGE</option>
                        <option value="4">Niagara Mohawk</option>
-					<option value="5">Other</option>
-=======
+					<option value="5">Other</option>-->
+
  <select class="chosen" name="utility" id="utility" style="width:230px;">
+  <option value="0"></option>
                 <option value="Ohio Edison">Ohio Edison</option>
                 <option value="Sacramento Municipal Utility Department">Sacramento Municipal Utility Department</option>
                 <option value="Delmarva Power & Light Company">Delmarva Power & Light Company</option>
@@ -171,29 +178,26 @@
                 <option value="Appalachian Power Company/Kingsport Power">Appalachian Power Company/Kingsport Power</option>
 
 					<option value="5">Other (Utility name)</option>
->>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
+
           </select>
           </div>
           
             <br>
             </div>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<<<<<<< HEAD
 			
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-             
-             <p class="colored-bar bluebar" id="fac_type"><font size="6">Upload Meter Data</font>
-			 <hr width="153%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-285px;"></p><br/><br/>
-=======
-	</div>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			 <hr width="135%"style="border-bottom: 4px solid ; color: ##585858;  line-height: 1.4em; margin-left:-165px;">
+             </div>
+            
+ 
+	
   <div class="show_hide type">		
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-             
-             <p class="colored-bar bluebar" id="fac_type" ><font size="6">Upload Meter Data</font>
-			 <hr width="153%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-285px;"></p>
->>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
+             <p  id="fac_type"><font size="6" color="#000000">Upload Meter Data</font>
+			</p><br/><br/>
+            
+
            <div class="form2">
              <div class="facility">
              Facility Type
@@ -251,7 +255,7 @@ Upload a file
 			  <br/>
 			  <br/>
 			  
-              <div id="month" class="consumption_period" style="display:block; margin-right:-590px;">
+              <div id="month" class="consumption_period" style="display:block; margin-right:-350px;">
                 <table align="center">
                   <tbody>
                     <tr>
@@ -363,18 +367,17 @@ Upload a file
             </select>
      
           </div>
-          <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>
-<<<<<<< HEAD
-		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		  
-=======
-		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        
+		  <hr width="155%" style="border-bottom: 4px solid; color: #585858; line-height: 1.4em; margin-left:-300px;">
+		 
 		  </div>
->>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
+ 
           <!---######################################################################################-->
           <div class="show_hide curtailment">
-             <p class="colored-bar bluebar" id="curtailment_capability" ><font size="6">Curtailment Capability</font></p>
-			 <hr width="155%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-300px;">
+             <p  id="curtailment_capability" ><font size="6" color="#000000">Curtailment Capability</font></p>
+			
              <br/><br/><br/>
              <div class="form3">
               <font color="#bb0000" size="3px"><b>*</b></font> Given 
@@ -420,15 +423,16 @@ Upload a file
             
             </div>
             
-  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <hr width="159%" style="border-bottom: 4px solid; color: #585858; line-height: 1.4em; margin-left:-310px;">
 
      </div>
 <!---######################################################################################-->
             <div class="show_hide generator">
-            <p class="colored-bar bluebar" id="standbygen"><font size="6">Stand-By Generator</font></p>
+            <p id="standbygen"><font size="6" color="#000000">Stand-By Generator</font></p>
 			
             <div class="form4">
-             <hr width="159%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-310px;">
+            
             <!--#####Gentable######-->
             
             <table id="gentabs" align="center"  width="540px" style="background-color:#ffffff; color: #000000; width:670px; border-color: #; text-align: center;" >
@@ -550,43 +554,39 @@ Upload a file
                     
             </tbody>
          </table>
-<<<<<<< HEAD
-            <br/> <br/><br/> <br/><br/><br/><br/>
-			<!---######################################################################################-->
-            
-            
-           <!-- <p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font>
-=======
+
             <br/> <br/><br/> <br/><br/>
+			
+			<hr width="159%" style="border-bottom: 4px solid; color: #585858; line-height: 1.4em; margin-left:-310px;">
+            
+            
+        
           </div>
+		  </div>
 			<!---######################################################################################-->
             
             <div class="show_hide dr">
-            <p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font></p>
->>>>>>> 377ff3e00cdd82173d9bd6387961c97473f9ef2f
+           <!-- <p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font></p>
+
              <hr width="159%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-310px;">
             </p>-->
             <div id="dropport"></div>
               
               <div id="options_table" style="overflow:scroll;width: 795px; overflow:auto; margin-right:300px;  margin-left:-150px;">
 			  
-			  	  
-			  
-			  
-			  
 			  </div>
 			  
 			  
 			  
 			  
-              <br/><br/> <br/><br/> <br/>
+              <br/><br/> 
 
               </div>
                <button type="button" id="submit" onClick="return check()" value="Submit">Submit</button>
  
 
  </form>
-          </div>
+         
             
         </div>
         </div></div>
@@ -599,15 +599,19 @@ Upload a file
     <script type="text/javascript" src="js/chosen.jquery.js" ></script>
     
     <script type="text/javascript" src="js/quicktool.js"></script>
+	<!--<script type="text/javascript" src="js/proto.chosen.js" ></script>-->
 	<!-- <script type="text/javascript" src="js/ScrollSpy-compressed.js"></script>
-	<script type="text/javascript" src="js/proto.chosen.js" ></script>
+	 
    <script type="text/javascript" src="js/ScrollSpy.js"></script>-->
  <script type="text/javascript" src="js/easing.js"></script>
    <script type="text/javascript" src="js/sprintf.js"></script> 
+<!--<script type="text/javascript" src="js/bootstrap-scrollspy.js"></script>-->
+<script type="text/javascript" src="js/jquery-scrollspy.js"></script>
 
- <!--<script type="text/javascript">
-$("#fixed-nav").ScrollSpy();
-</script>-->
+
+ <script type="text/javascript">
+$("#fixed-nav").scrollspy();
+</script>
 
 
 

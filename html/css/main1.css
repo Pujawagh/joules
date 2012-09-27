@@ -111,6 +111,7 @@ text-align:left;
 float:left;
 text-align:left;
 margin-top:-20px;
+
 }
 .chzn-container {
 font-size: 19px;
@@ -130,7 +131,7 @@ color:#6C6B6B;
 {
 
 width:770px;
-margin-left:-120px;
+margin-left:-110px;
 position: relative;
 float: left;
 }
@@ -265,26 +266,36 @@ text-align: center;
 
 }
 
-
 #topnav
-{
+{margin-top:-20px;}
 
-margin-top:-20px;
-}
 
 
 
 #fixed-nav {
   position: fixed;
+
   z-index: 1;
   left: 0;
-  top: 410px;
+  top: 300px;
    
 }
+#sidebar
+{
+ background:#ABBFD0 url('../img/sidebarnav.png');
+  width: 9.4em;
+ box-shadow: 10px 10px 5px #888888;
+  height: 80%;
+ 
 
+  float:left;
+ position:fixed;
+ margin-left:-1080px;
+ margin-top: -33px;
+}
 #fixed-nav li 
 {
-  margin: 0 0 44px;
+  margin: 0 0 43px;
   list-style: none;
   margin-left:-75px;
  
@@ -295,14 +306,14 @@ margin-top:-20px;
 #location
 {
 border:2px solid #a1a1a1;
-padding: 17.5px 36.8px;
-background:#39528C;
+padding: 17.5px 35px 17px;
+background:#256EAE;
 
 border-bottom-right-radius:22px;
 text-decoration:none;
 color:ffffff;
 margin-left:25px;
-
+box-shadow: 10px 10px 5px #888888;
 -webkit-transition:0.4s all ease-in-out;
 
 }
@@ -311,8 +322,8 @@ a#location:hover
 {
 
 /*padding:32px 23.5px; */
-color: #000000;
-background-color:#958E8E;
+color: #ffffff;
+background-color:#0B6121;
 -webkit-transition:0.3s all ease-in-out;
 
 }
@@ -321,9 +332,9 @@ background-color:#958E8E;
 #type
 {
 border:2px solid #a1a1a1;
-padding: 17px 22.9px;
-background:#39528C;
-
+padding: 18px 22.9px 15px;
+background:#256EAE;
+box-shadow: 10px 10px 5px #888888;
 border-bottom-right-radius:22px;
 text-decoration:none;
 color:ffffff;
@@ -335,8 +346,8 @@ margin-left:24px;
 a#type:hover
 {
 /*padding:32px 48.5px; */
-color: #000000;
-background-color:#958E8E;
+color: #ffffff;
+background-color:#0B6121;
 -webkit-transition:0.3s all ease-in-out;
 
 
@@ -346,13 +357,13 @@ background-color:#958E8E;
 border:2px solid #a1a1a1;
 
 padding: 21.5px 5px;
-background:#39528C;
+background:#256EAE;
 width:100px;
 border-bottom-right-radius:22px;
 text-decoration:none;
 color:ffffff;
 margin-left:24px;
-
+box-shadow: 10px 10px 5px #888888;
 -webkit-transition:0.4s all ease-in-out;
 
 }
@@ -362,9 +373,9 @@ a#curtailment:hover
   
    
 /*padding:42px 15px; */
-color: #000000;
+color: #ffffff;
 
-background-color:#958E8E;
+background-color:#0B6121;
 -webkit-transition:0.3s all ease-in-out;
 
 
@@ -379,10 +390,10 @@ background-color:#958E8E;
 #generator
 {
 border:2px solid #a1a1a1;
-padding:14.8px 15.8px 24px; 
-background:#39528C;
+padding:14.8px 15.7px 24.5px; 
+background:#256EAE;
 margin-left:24px;
-
+box-shadow: 10px 10px 5px #888888;
 border-bottom-right-radius:21.8px;
 text-decoration:none;
 color:ffffff;
@@ -393,8 +404,8 @@ color:ffffff;
 a#generator:hover
 {
 /*padding:32px 15px; */
-color:#000000;
-background-color:#958E8E;
+color:#ffffff;
+background-color:#0B6121;
 -webkit-transition:0.3s all ease-in-out;
 }
 
@@ -404,8 +415,8 @@ background-color:#958E8E;
 {
 border:2px solid #a1a1a1;
 padding:12px 37px 25.9px; 
-background:#39528C;
-
+background:#256EAE;
+box-shadow: 10px 10px 5px #888888;
 border-bottom-right-radius:22px;
 text-decoration:none;
 color:ffffff;
@@ -420,17 +431,17 @@ margin-left:20px;
 a#DR:hover
 {
 /*padding:32px 35px; */
-color: #000000;
-background-color:#958E8E;
+color: #ffffff;
+background-color:#0B6121;
 -webkit-transition:0.3s all ease-in-out;
 }
 
 #top
 {
 border:2px solid #a1a1a1;
-padding:11px 56.8px 26.8px; 
-background:#585858;
-
+padding:11px 60.8px 26.8px; 
+background:#848484;
+box-shadow: 10px 10px 5px #888888;
 width:300px;
 border-bottom-right-radius:22px;
 text-decoration:underline;
@@ -444,8 +455,8 @@ margin-left:2px;
 a#top:hover
 {
 /*padding:22px 80px; */
-color: #000000;
-background-color: #958E8E;
+color: #ffffff;
+background-color: #0B6121;
 -webkit-transition:0.3s all ease-in-out;
 }
 
@@ -536,7 +547,11 @@ position:relative;
 position:relative;
 	top:1px;
 }
+#selectedHeader
+{
 
+background-color: #585858;
+}
 #season
 {
 margin-left:280px;
@@ -552,4 +567,8 @@ margin-left:280px;
 #field
 {
 margin-left:-200px;
+}
+#city
+{
+width:100%;
 }

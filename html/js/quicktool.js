@@ -1,3 +1,4 @@
+
 $(function(){
  $('.consumption_period').hide();
  $('#meter_usage_data') .change(function(){
@@ -10,6 +11,7 @@ $(function(){
 
 
 });
+
 
 
 function validate(val)
@@ -60,7 +62,7 @@ function scrollToElement(selector, time, verticalOffset) {
 
 }
 
-$('a#DR').click(function () {
+$('div#dropp').click(function () {
     scrollToElement('#dropportunity');
 });
 $('a#location').click(function () {
@@ -118,8 +120,8 @@ return false;
 }
 else
 {
-$('#dropp').html('<li><a href="#" id="DR"><font size="3.7px">DR opportunity</a></li>')
-$('#dropport').html('<p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font><hr width="159%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-310px;"></p>')
+$('#dropp').html('<li><a href="file:///C:/Users/Asus3/joules/html/quicktool.html#dr" id="DR"><font size="3.7px">DR opportunity</a></li>')
+$('#dropport').html('<p id="dropportunity"><font size="6" color="#000000">DR Opportunity</font></p>')
 $('#options_table').html('<br/><br/><div id="progress"><img src="img/loading.gif" width="23px" height="23px">Loading...</div><br/><br/>')
 $('#submit').hide();
 save()  
@@ -159,23 +161,7 @@ window.onload=function() { setMessage(document.getElementById('txtArea', false))
  
 }
 
- function getOther1(sel){
-    if (sel.value=='5')
-    {
-    
-      $('#'+sel.id).parent().append('<div class="'+sel.id+'__old" <b>Other</b><input id="'+sel.id+'" name="'+sel.id+'">')
-      sel.id = sel.id +'__old';
-      console.log(sel.id)
-     }
-     else
-     {
-       
 
-       $('.'+sel.id).hide();
-        sel.id = sel.id.split('__')[0]
-     }
- 
-}
 
 
 
@@ -230,7 +216,7 @@ $('#prog_table').html('')
       n++
       });
     
-  options_tables_string+= '<br><br><button type="button" class="manage_facility" id="genreport">Generate Full Report</button>'
+  options_tables_string+= '<br><br><button type="button" id="genreport">Generate Full Report</button>'
      $('#options_table').html(options_tables_string);
 	
      $('#genreport').click(function(){
@@ -279,5 +265,74 @@ tr.style.backgroundColor=(obj.checked)? '#ACFAE9':'#ffffff ';
 
 
 
+/*$("#type").click( function() {
+    
+    // Hide all the tab divs
+    $(".generator").hide(); 
+	 $(".location").hide(); 
+	  $(".curtailment").hide(); 
+} );
+$("#curtailment").click( function() {
+    
+    // Hide all the tab divs
+    $(".generator").hide(); 
+	 $(".type").hide(); 
+	  $(".location").hide(); 
+} );*/
 
+/*$("#location").click( function() {
+     $(".location").show();
+    // Hide all the tab divs
+    $(".generator").hide(); 
+	 $(".type").hide(); 
+	  $(".curtailment").hide(); 
+} );*/
+
+/*$(".show_hide").click(function(){
+      $(".show_hide").hide("fast");
+      $(this).toggle("fast");
+});*/
+
+
+function makeUtilities(state,town) {
+
+  $.ajax({
+    url: 'getUtilityView',
+    
+    data: {state:state.value,town:town.value},
+    success: function(data) 
+    
+    {
+     
+    
+    $('#utility').html('')
+    $('#other').html('')
+    utilities = eval(data)
+    
+   
+    $.each(utilities,function(){
+      $('#utility').attr('name','utility')
+      $('#utility').append(sprintf('<option value="%s">%s</option>',this.name,this.name))
+
+    });
+    
+    
+    $('#utility').append('<option value="other">Other (Utility name)</option>')
+    if (utilities.length==0)
+    {
+      $('#other').html('<br/><br/><b>Other:</b><input id="utility" type="text" name="utility">')
+    }
+   
+    
+  },
+  
+  error:function (xhr, ajaxOptions, thrownError)
+  {
+               
+                $('#other').html('<br/><br/><b>Other:</b><input id="utility" type="text" name="utility">')
+                    }
+                    
+ 
+});
+}
 
