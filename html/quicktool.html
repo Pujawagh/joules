@@ -53,30 +53,23 @@
 <img src="img/eras1.png" width="193%" height="120%"style=" margin-top: -35%;  margin-left: -78px;">
 <nav id="fixed-nav">
 
-		<ul class="fixed-nav">
-		
-			<li><a href="file:///C:/Users/Asus3/joules/html/quicktool.html#location" id="location" class="show_hide location"> <font size="3.7px"> Facility Location</font></a></li>
-			 <li><a href="file:///C:/Users/Asus3/joules/html/quicktool.html#type" id="type" class="show_hide type"><font size="3.7px">Upload Meter Data</a></li>
+    <ul class="fixed-nav">
+    
+      <li><a href="#location" id="location" class="show_hide location"> <font size="3.7px"> Facility Location</font></a></li>
+       <li><a href="#type" id="type" class="show_hide type"><font size="3.7px">Upload Meter Data</a></li>
    
-      <li><a href="file:///C:/Users/Asus3/joules/html/quicktool.html#curtailment" id="curtailment"  class="show_hide curtailment"><font size="3px">Curtailment Capability</a></li>
-	    <li><a href="file:///C:/Users/Asus3/joules/html/quicktool.html#generator" id="generator" class="show_hide generator"><font size="3.7px">Stand-By Generator</a></li>
-	  
-<<<<<<< HEAD
-      <div id="dropp"></div>
-	  <!--<li><a href="#" id="DR"><font size="3.7px">DR opportunity</a></li> -->
-      <li><a href="#" id="DR" class="show_hide dr"><font size="3.7px">DR opportunity</a></li> 
-			<li><a href="#" id="top"><font size="3.7px">Back to Top </a></li><br/>														
-=======
+      <li><a href="#curtailment" id="curtailment"  class="show_hide curtailment"><font size="3px">Curtailment Capability</a></li>
+      <li><a href="#generator" id="generator" class="show_hide generator"><font size="3.7px">Stand-By Generator</a></li>
+    
 
       <div id="dropp"></div>
-	  <!--<li><a href="#" id="DR"><font size="3.7px">DR opportunity</a></li> -->
+    <!--<li><a href="#" id="DR"><font size="3.7px">DR opportunity</a></li> -->
 
       
 
-			<li><a href="file:///C:/Users/Asus3/joules/html/quicktool.html#" id="top"><font size="3.7px">Back to Top </a></li><br/>														
->>>>>>> 1c6083d6c34914b8d6cdd46fa3a3c0b3a63f1046
-		</ul>
-	</nav>
+      <li><a href="#" id="top"><font size="3.7px">Back to Top </a></li><br/>                           
+    </ul>
+  </nav>
   
   </div>
   
@@ -86,21 +79,16 @@
 <form name= "form" action="demo" method="post">
           <input type="hidden" name="fa_id" value="0">
           <input type="hidden" name="user" value="twisterius">
-		  <p id="field" style="margin-top: -20px;"><font color="#bb0000"><b>*</b></font><em> <font size="4px">Indicates required fields.</font></em></p>
+      <p id="field" style="margin-top: -20px;"><font color="#bb0000"><b>*</b></font><em> <font size="4px">Indicates required fields.</font></em></p>
           <div class="forms">
-		  
+      
 
 <br><br>
 
 <div class="show_hide location">
 
-<<<<<<< HEAD
-          <p class="colored-bar bluebar" id="fac_loc"><font size="6">Facility Location</font>
-		   <hr width="135%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-165px;"></p>
-=======
           <p id="fac_loc"><font size="6" color="#000000">Facility Location</font>
-		  </p>
->>>>>>> 1c6083d6c34914b8d6cdd46fa3a3c0b3a63f1046
+      </p>
             <div id="address"class="address">Address<br/>
             <input class="inputfield" type="text" size="36" name="address" value="" style="width: 600px; height: 55px;" ></div>
            <br/><br/>
@@ -111,11 +99,11 @@
              <label>State</label>&nbsp;&nbsp;<select class="chosen" id="state" name="state" style="width:240px; ">
                 <option value="0"></option>
                 <option value="CT">CT</option><option value="DC">DC</option>
-				<option value="DE">DE</option><option value="MA">MA</option><option value="MD">MD</option>
-				<option value="MI">MI</option><option value="NJ">NJ</option><option value="NY">NY</option>
-				<option value="OH">OH</option><option value="PA">PA</option><option value="VA">VA</option>
-				<option value="WV">WV</option>           
-				</select>
+        <option value="DE">DE</option><option value="MA">MA</option><option value="MD">MD</option>
+        <option value="MI">MI</option><option value="NJ">NJ</option><option value="NY">NY</option>
+        <option value="OH">OH</option><option value="PA">PA</option><option value="VA">VA</option>
+        <option value="WV">WV</option>           
+        </select>
             </div>
             <br/><br/>
            <div class="address"><font color="#bb0000"><b>*</b></font><label>Zip Code</label><br/>
@@ -124,21 +112,13 @@
           
              <font color="#bb0000"><b>*</b></font>Utility</font>
 
-<<<<<<< HEAD
- <select class="chosen" name="utility" id="utility" style="width:230px" onchange="getOther1(this);">
-=======
  <!--<select class="chosen" name="utility" id="utility" style="width:230px" onchange="getOther1(this);">
->>>>>>> 1c6083d6c34914b8d6cdd46fa3a3c0b3a63f1046
                 <option value="0"></option>
               <option value="1">Con Edison</option>
                  <option value="2">NYSEG</option>
                     <option value="3">RGE</option>
                        <option value="4">Niagara Mohawk</option>
-<<<<<<< HEAD
-					<option value="5">Other</option>
-=======
-					<option value="5">Other</option>-->
->>>>>>> 1c6083d6c34914b8d6cdd46fa3a3c0b3a63f1046
+          <option value="5">Other</option>-->
 
  <select class="chosen" name="utility" id="utility" style="width:230px;">
   <option value="0"></option>
@@ -197,45 +177,26 @@
                 <option value="Appalachian Power Company/ Kingsport Power Company">Appalachian Power Company/ Kingsport Power Company</option>
                 <option value="Appalachian Power Company/Kingsport Power">Appalachian Power Company/Kingsport Power</option>
 
-					<option value="5">Other (Utility name)</option>
+          <option value="5">Other (Utility name)</option>
 
           </select>
           </div>
           
             <br>
             </div>
-<<<<<<< HEAD
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-			
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-             
-             <p class="colored-bar bluebar" id="fac_type"><font size="6">Upload Meter Data</font>
-			 <hr width="153%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-285px;"></p><br/><br/>
-
-	</div>
-  <div class="show_hide type">		
+      
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-             
-             <p class="colored-bar bluebar" id="fac_type" ><font size="6">Upload Meter Data</font>
-			 <hr width="153%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-285px;"></p>
-=======
-			
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-			 <hr width="135%"style="border-bottom: 4px solid ; color: ##585858;  line-height: 1.4em; margin-left:-165px;">
+       <hr width="135%"style="border-bottom: 4px solid ; color: ##585858;  line-height: 1.4em; margin-left:-165px;">
              </div>
             
  
-	
-  <div class="show_hide type">		
+  
+  <div class="show_hide type">    
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
              <p  id="fac_type"><font size="6" color="#000000">Upload Meter Data</font>
-			</p><br/><br/>
+      </p><br/><br/>
             
->>>>>>> 1c6083d6c34914b8d6cdd46fa3a3c0b3a63f1046
 
            <div class="form2">
              <div class="facility">
@@ -260,7 +221,7 @@
           <font size="3.5px"><b><p id="upload">Click here to upload your meter data.</p></b></font>
 
             <div id="upload_meter_data_file_input">
-			<div class="file_uploader">
+      <div class="file_uploader">
 <div class="upload_drop_files" style="display: none;">
 <span>Drop files here to upload</span>
 </div>
@@ -276,7 +237,7 @@ Upload a file
 <ul class="upload-list"></ul>
 </div>
             </div>&nbsp;&nbsp;&nbsp;<a href="">Download Template</a><br/><br/>
-			
+      
       <center><h3>OR</h3></center>
       <br/>
      <p id="meterdata"> <b><font size="3.5px">Manually enter your metered usage data</font></b><br/><br/>
@@ -288,12 +249,12 @@ Upload a file
                     <option value="year">Yearly</option>
                      
           </select></p>
-<div id="manual_data" style="overflow:visible;">			
-		             
+<div id="manual_data" style="overflow:visible;">      
+                 
 
-			  <br/>
-			  <br/>
-			  
+        <br/>
+        <br/>
+        
               <div id="month" class="consumption_period" style="display:block; margin-right:-350px;">
                 <table align="center">
                   <tbody>
@@ -306,8 +267,8 @@ Upload a file
                       <td style="background-color: #6E6E6E; color: #ffffff;"><b>June</b></td>
                     </tr>
                     <tr>
-					 
-					 
+           
+           
                      <td><input type="text" id="january" class="number uploadmeter_table" name="january" value="kWh" onfocus="value=''"></td>
                       
                       <td><input type="text" id="febuary" class="number uploadmeter_table"name="febuary" value="kWh" onfocus="value=''"></td>
@@ -353,15 +314,15 @@ Upload a file
                   </tbody>
                 </table>
               </div>
-			  <div id="season" class="consumption_period" style="display:none">
-			  
-			   <table>
-			   <tr>
-			   <td>
-			   
-			 <b>Winter</b> &nbsp;&nbsp;&nbsp;&nbsp;
-			 
-			 <input type="text" id="winter" class="number" cols="45" rows="5" name="winter" value="kWh" onfocus="value=''">
+        <div id="season" class="consumption_period" style="display:none">
+        
+         <table>
+         <tr>
+         <td>
+         
+       <b>Winter</b> &nbsp;&nbsp;&nbsp;&nbsp;
+       
+       <input type="text" id="winter" class="number" cols="45" rows="5" name="winter" value="kWh" onfocus="value=''">
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
                      <input type="text" id="winter_peak"  class="number" cols="45" rows="5" name="winter_peak" value="peak kW" onfocus="value=''">
                      
@@ -372,17 +333,17 @@ Upload a file
                 <input type="text" id="summer" class="number" name="summer" value="kWh" onfocus="value=''">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
                     <input type="text" id="summer_peak" class="number"  name="summer_peak"  value="peak kW" onfocus="value=''">
-				</td>
+        </td>
 </tr>
-</table>				
+</table>        
               </div>
-			
+      
             
               <div id="year" class="consumption_period" style="display:none;">
-			  <table>
-			  <tr>
-			  <td>
-			  
+        <table>
+        <tr>
+        <td>
+        
                 <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whole Year </b>
                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="text" id="yearly" class="number"  name="yearly" value="kWh" onfocus="value=''">
@@ -390,7 +351,7 @@ Upload a file
                   <input type="text" id="yearly_peak" class="number"  name="yearly_peak"  value="peak kW" onfocus="value=''">
                 </td></tr></table>
               </div>
-			  
+        
             </div><br/><br/>
       <font size="4.8px">Meter Resolution</font>
 <select class="chosen" name="meter_resolution" style="width:250px;" >
@@ -406,28 +367,17 @@ Upload a file
             </select>
      
           </div>
-<<<<<<< HEAD
-          <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>  <br/><br/>
-
-		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		  
-
-		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		  </div>
-
-=======
-		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         
-		  <hr width="155%" style="border-bottom: 4px solid; color: #585858; line-height: 1.4em; margin-left:-300px;">
-		 
-		  </div>
+      <hr width="155%" style="border-bottom: 4px solid; color: #585858; line-height: 1.4em; margin-left:-300px;">
+     
+      </div>
  
->>>>>>> 1c6083d6c34914b8d6cdd46fa3a3c0b3a63f1046
           <!---######################################################################################-->
           <div class="show_hide curtailment">
              <p  id="curtailment_capability" ><font size="6" color="#000000">Curtailment Capability</font></p>
-			
+      
              <br/><br/><br/>
              <div class="form3">
               <font color="#bb0000" size="3px"><b>*</b></font> Given 
@@ -480,7 +430,7 @@ Upload a file
 <!---######################################################################################-->
             <div class="show_hide generator">
             <p id="standbygen"><font size="6" color="#000000">Stand-By Generator</font></p>
-			
+      
             <div class="form4">
             
             <!--#####Gentable######-->
@@ -604,44 +554,31 @@ Upload a file
                     
             </tbody>
          </table>
-<<<<<<< HEAD
-            <br/> <br/><br/> <br/><br/><br/><br/>
-			<!---######################################################################################-->
-            
-            
-           <!-- <p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font>
-            <br/> <br/><br/> <br/><br/>
-=======
 
             <br/> <br/><br/> <br/><br/>
-			
-			<hr width="159%" style="border-bottom: 4px solid; color: #585858; line-height: 1.4em; margin-left:-310px;">
+      
+      <hr width="159%" style="border-bottom: 4px solid; color: #585858; line-height: 1.4em; margin-left:-310px;">
             
             
         
->>>>>>> 1c6083d6c34914b8d6cdd46fa3a3c0b3a63f1046
           </div>
-		  </div>
-			<!---######################################################################################-->
+      </div>
+      <!---######################################################################################-->
             
             <div class="show_hide dr">
-<<<<<<< HEAD
-            <p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font></p>
-=======
            <!-- <p class="colored-bar bluebar" id="dropportunity"><font size="6">DR Opportunity</font></p>
 
->>>>>>> 1c6083d6c34914b8d6cdd46fa3a3c0b3a63f1046
              <hr width="159%" style="border-bottom: 4px solid #389EFD; line-height: 1.4em; margin-left:-310px;">
             </p>-->
             <div id="dropport"></div>
               
               <div id="options_table" style="overflow:scroll;width: 795px; overflow:auto; margin-right:300px;  margin-left:-150px;">
-			  
-			  </div>
-			  
-			  
-			  
-			  
+        
+        </div>
+        
+        
+        
+        
               <br/><br/> 
 
               </div>
@@ -662,9 +599,9 @@ Upload a file
     <script type="text/javascript" src="js/chosen.jquery.js" ></script>
     
     <script type="text/javascript" src="js/quicktool.js"></script>
-	<!--<script type="text/javascript" src="js/proto.chosen.js" ></script>-->
-	<!-- <script type="text/javascript" src="js/ScrollSpy-compressed.js"></script>
-	 
+  <!--<script type="text/javascript" src="js/proto.chosen.js" ></script>-->
+  <!-- <script type="text/javascript" src="js/ScrollSpy-compressed.js"></script>
+   
    <script type="text/javascript" src="js/ScrollSpy.js"></script>-->
  <script type="text/javascript" src="js/easing.js"></script>
    <script type="text/javascript" src="js/sprintf.js"></script> 
