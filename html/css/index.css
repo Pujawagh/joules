@@ -17,4 +17,54 @@ background-size:100% 100%;
  
 }
 
+#text1
+{visibility:hidden;}
 
+#text2
+{
+visibility:hidden;
+}
+#text3
+{
+visibility:hidden;
+}
+
+#venn
+{
+  height:190px;
+  width:199px;
+  position:absolute;
+  background-image:url('img/circles.png');
+  background-size:cover;
+  -moz-background-size: cover;
+}
+#thought_leadership
+{
+  z-index:1;
+  height:52%;
+  width:50%;
+  opacity:0;
+  background:#123465;
+  border-radius:100000;
+  margin:11.5% 20.5%;
+}
+#market_tools
+{
+  z-index:2;
+  height:52%;
+  width:50%;
+  opacity:0;
+  background:#123465;
+  border-radius:100000;
+  margin:-44.2% 40.5%;
+}
+#financing
+{
+  z-index:3;
+  height:50%;
+  width:50%;
+  opacity:0;
+  background:#123465;
+  border-radius:100000;
+  margin:7% 13%;
+}
