@@ -35,22 +35,10 @@
  
 	<!--<a href="#"><img src="img/index1.png"  style="margin-left:300px;"border="0"  /></a>-->
 	
-<img src="img/logonew.png">
-<div id="tool_bar">
-  <div id="home">
-    <img src='img/header/home.png' id='home_hover'>
-  </div>
-  <div id="mission"></div>
-  <div id="products"></div>
-  <div id="blog"></div>
-  <div id="team"></div>
-  <div id="contact"></div>
-  <div id="log_in"></div>
-</div>
-
-</div>
+<a href="#"><img src="img/homepagenew.png"  style="margin-left:300px; width:65%; height: 37%;"border="0"/>
 <div id="venn">
-  <div id="thought_leadership"></div>
+  <div id="thought_leadership">
+</div>
   <div id="market_tools"></div>
   <div id="financing"></div>
 </div>

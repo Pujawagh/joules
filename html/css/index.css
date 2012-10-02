@@ -29,10 +29,95 @@ visibility:hidden;
 visibility:hidden;
 }
 
+#tool_bar
+{
+background-image:url('img/toolbarnew.png');
+height:117px;
+width:980px;
+}
+
+
+#home
+{
+margin:32px 13px;
+float:left;
+
+height:41px;
+width:144px;
+}
+
+#home_hover
+{
+margin: -6px 43px;
+}
+
+#mission
+{
+margin:32px -13px;
+float:left;
+
+height:41px;
+width:127px;
+
+}
+
+#products
+{
+margin:32px 13px;
+float:left;
+
+height:41px;
+width:161px;
+
+}
+
+#blog
+{
+margin:32px -13px;
+float:left;
+
+height:41px;
+width:110px;
+
+}
+
+#team
+{
+margin:32px 13px;
+float:left;
+
+height:41px;
+width:117px;
+
+}
+
+#contact
+{
+
+margin:32px -13px;
+float:left;
+
+height:41px;
+width:132px;
+
+
+}
+
+#log_in
+{
+margin:32px 13px;
+float:left;
+
+height:41px;
+width:146px;
+
+}
+
 #venn
 {
   height:190px;
   width:199px;
+  margin:200px 200px;
   position:absolute;
   background-image:url('img/circles.png');
   background-size:cover;
@@ -43,7 +128,7 @@ visibility:hidden;
   z-index:1;
   height:52%;
   width:50%;
-  opacity:0;
+  opacity:.5;
   background:#123465;
   border-radius:100000;
   margin:11.5% 20.5%;
